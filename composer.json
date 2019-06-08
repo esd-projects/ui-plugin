@@ -1,6 +1,6 @@
 {
-  "name": "lphkxd/esd_ui",
-  "description": "esd_ui",
+  "name": "lphkxd/esd-admin",
+  "description": "esd-admin",
   "type": "library",
   "require": {
     "esd/esd-server":"~0.1",
