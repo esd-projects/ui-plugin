@@ -4,7 +4,6 @@
   "type": "library",
   "require": {
     "esd/esd-server":"~0.1",
-    "esd/blade-plugin":"~0.1",
     "ext-redis": "*",
     "ext-mcrypt": "*"
   },
