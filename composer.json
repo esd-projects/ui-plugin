@@ -1,0 +1,31 @@
+{
+  "name": "lphkxd/esd_ui",
+  "description": "esd_ui",
+  "type": "library",
+  "require": {
+    "esd/esd-server":"~0.1",
+    "esd/blade-plugin":"~0.1",
+    "ext-redis": "*",
+    "ext-mcrypt": "*"
+  },
+  "require-dev": {
+    "php": ">=5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "ESD\\Plugins\\": "src/",
+      "App\\": "src/",
+      "ESD\\Examples\\": "examples/src/"
+    },
+    "files": [
+      "src/Helpers/helper.php"
+    ]
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ese_ui",
+      "email": "4213509@qq.com"
+    }
+  ]
+}
