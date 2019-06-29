@@ -6,7 +6,7 @@
  * Time: 下午6:46
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
 class Email extends Text

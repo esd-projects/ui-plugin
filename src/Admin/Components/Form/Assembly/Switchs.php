@@ -6,19 +6,20 @@
  * Time: 下午8:43
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Beans\Admin;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 class Switchs extends Assembly
 {
     protected $text = '开|关';
 
     /**
-     * @title text
-     * @description
-     * @createtime 2019/2/24 下午9:03
+     * title text
+     * description
+     * createtime 2019/2/24 下午9:03
      * @param $on
      * @param $off
      * @return $this
@@ -31,9 +32,9 @@ class Switchs extends Assembly
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -52,9 +53,9 @@ HTML;
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/3/10 下午4:31
+     * title afterSetForm
+     * description
+     * createtime 2019/3/10 下午4:31
      */
     protected function afterSetForm()
     {
@@ -62,9 +63,9 @@ HTML;
     }
 
     /**
-     * @title on
-     * @description
-     * @createtime 2019/3/3 下午9:44
+     * title on
+     * description
+     * createtime 2019/3/3 下午9:44
      * @param $callback
      * @return $this
      */

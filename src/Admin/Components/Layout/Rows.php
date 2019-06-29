@@ -6,7 +6,7 @@
  * Time: 下午2:54
  */
 
-namespace ESD\Plugins\Admin\layout;
+namespace ESD\Plugins\Admin\Components\Layout;
 
 
 use ESD\Plugins\Admin\Beans\Layout;
@@ -31,9 +31,9 @@ class Rows extends Layout
     }
 
     /**
-     * @title columns
-     * @description add an columns
-     * @createtime 2019/1/30 下午3:36
+     * title columns
+     * description add an columns
+     * createtime 2019/1/30 下午3:36
      * @param $html
      * @param int $width
      * @return Rows
@@ -50,9 +50,9 @@ class Rows extends Layout
     }
 
     /**
-     * @title setColumns
-     * @description set columns, each columns is a instance of Yirius/Admin/layout/Columns
-     * @createtime 2019/1/30 下午3:36
+     * title setColumns
+     * description set columns, each columns is a instance of Yirius/Admin/layout/Columns
+     * createtime 2019/1/30 下午3:36
      * @param Columns $column
      * @return Rows
      */
@@ -64,9 +64,9 @@ class Rows extends Layout
     }
 
     /**
-     * @title render
-     * @description use for render each type
-     * @createtime 2019/1/30 下午3:10
+     * title render
+     * description use for render each type
+     * createtime 2019/1/30 下午3:10
      * @return string
      */
     public function render()

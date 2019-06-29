@@ -6,10 +6,11 @@
  * Time: 下午4:03
  */
 
-namespace ESD\Plugins\Admin\Form;
+namespace ESD\Plugins\Admin\Components\Form;
 
+use ESD\Plugins\Admin\Beans\Admin;
 use ESD\Plugins\Admin\Beans\Layout;
-use ESD\Plugins\Admin\Layout\PageView;
+use ESD\Plugins\Admin\Components\Layout\PageView;
 
 /**
  * Class Form
@@ -74,6 +75,7 @@ class Form extends Layout
      * Form constructor.
      * @param $name
      * @param \Closure|null $callback
+     * @throws \Exception
      */
     public function __construct($name, \Closure $callback = null)
     {
@@ -87,9 +89,9 @@ class Form extends Layout
     }
 
     /**
-     * @title registerBuiltInAssemblys
-     * @description
-     * @createtime 2019/2/24 下午2:06
+     * title registerBuiltInAssemblys
+     * description
+     * createtime 2019/2/24 下午2:06
      * @return $this
      * @throws \Exception
      */
@@ -116,18 +118,19 @@ class Form extends Layout
             'wangeditor' => Assembly\WangEditor::class,
         ]);
 
+        //TODO:读取系统配置
         //judge thinkeradmin's config extends
-        if (config('thinkeradmin.form.extends')) {
-            $this->setExtends(config('thinkeradmin.form.extends'));
-        }
+//        if (config('thinkeradmin.form.extends')) {
+//            $this->setExtends(config('thinkeradmin.form.extends'));
+//        }
 
         return $this;
     }
 
     /**
-     * @title inline
-     * @description set inline or not inline
-     * @createtime 2019/2/27 下午12:22
+     * title inline
+     * description set inline or not inline
+     * createtime 2019/2/27 下午12:22
      * @param \Closure $inline
      * @return \Closure|Inline
      */
@@ -141,9 +144,9 @@ class Form extends Layout
     }
 
     /**
-     * @title tab
-     * @description
-     * @createtime 2019/3/12 下午11:57
+     * title tab
+     * description
+     * createtime 2019/3/12 下午11:57
      * @param $tabName
      * @param \Closure $tab
      * @return \Closure|Tab
@@ -158,9 +161,9 @@ class Form extends Layout
     }
 
     /**
-     * @title footer
-     * @description
-     * @createtime 2019/2/25 下午11:26
+     * title footer
+     * description
+     * createtime 2019/2/25 下午11:26
      * @param \Closure $footer
      * @return Footer
      */
@@ -177,9 +180,9 @@ class Form extends Layout
     }
 
     /**
-     * @title show
-     * @description
-     * @createtime 2019/3/3 下午8:59
+     * title show
+     * description
+     * createtime 2019/3/3 下午8:59
      * @param \Closure|null $closure
      * @return mixed
      */
@@ -187,7 +190,7 @@ class Form extends Layout
     {
         if ($closure instanceof \Closure) {
             return Admin::pageView(function (PageView $pageView) use ($closure) {
-                call($closure, [$pageView, $this->render()]);
+                call_user_func_array($closure, [$pageView, $this->render()]);
             })->render();
         } else {
             return Admin::pageView(function (PageView $pageView) {
@@ -197,9 +200,9 @@ class Form extends Layout
     }
 
     /**
-     * @title render
-     * @description use for render each type
-     * @createtime 2019/1/30 下午3:10
+     * title render
+     * description use for render each type
+     * createtime 2019/1/30 下午3:10
      * @return mixed
      */
     public function render()
@@ -229,9 +232,9 @@ HTML;
     }
 
     /**
-     * @title setName
-     * @description
-     * @createtime 2019/2/25 下午11:31
+     * title setName
+     * description
+     * createtime 2019/2/25 下午11:31
      * @param $name
      * @return $this
      */
@@ -243,9 +246,9 @@ HTML;
     }
 
     /**
-     * @title parseTabs
-     * @description
-     * @createtime 2019/3/12 下午11:56
+     * title parseTabs
+     * description
+     * createtime 2019/3/12 下午11:56
      * @return string
      */
     protected function parseTabs()
@@ -265,9 +268,9 @@ HTML;
     }
 
     /**
-     * @title __call
-     * @description find assembly
-     * @createtime 2019/2/24 下午4:15
+     * title __call
+     * description find assembly
+     * createtime 2019/2/24 下午4:15
      * @param $method
      * @param $arguments
      * @return mixed
@@ -285,9 +288,9 @@ HTML;
     }
 
     /**
-     * @title getExtends
-     * @description
-     * @createtime 2019/2/24 下午2:14
+     * title getExtends
+     * description
+     * createtime 2019/2/24 下午2:14
      * @param $name
      * @return mixed|string
      */
@@ -303,9 +306,9 @@ HTML;
     }
 
     /**
-     * @title setExtends
-     * @description
-     * @createtime 2019/2/24 下午2:14
+     * title setExtends
+     * description
+     * createtime 2019/2/24 下午2:14
      * @param $name
      * @param null $class
      * @return $this
@@ -327,9 +330,9 @@ HTML;
     }
 
     /**
-     * @title setAssemblys
-     * @description
-     * @createtime 2019/2/24 下午2:16
+     * title setAssemblys
+     * description
+     * createtime 2019/2/24 下午2:16
      * @param Assembly $assembly
      * @return $this
      */
@@ -343,9 +346,9 @@ HTML;
     }
 
     /**
-     * @title getValue
-     * @description
-     * @createtime 2019/2/28 上午11:24
+     * title getValue
+     * description
+     * createtime 2019/2/28 上午11:24
      * @param null $name
      * @return array|mixed|string
      */
@@ -363,9 +366,9 @@ HTML;
     }
 
     /**
-     * @title setValue
-     * @description
-     * @createtime 2019/2/28 上午11:21
+     * title setValue
+     * description
+     * createtime 2019/2/28 上午11:21
      * @param $value
      * @return $this
      */

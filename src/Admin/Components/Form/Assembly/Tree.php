@@ -6,10 +6,10 @@
  * Time: 下午5:11
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 /**
  * Class Tree
@@ -34,7 +34,7 @@ use ESD\Plugins\Admin\Form\Assembly;
  * @method Tree getSpread()
  * @method Tree getDisabled()
  *
- * @package ESD\Plugins\Admin\Form\assembly
+ * @package ESD\Plugins\Admin\Components\Form\assembly
  */
 class Tree extends Assembly
 {
@@ -63,9 +63,9 @@ class Tree extends Assembly
     }
 
     /**
-     * @title setClickEvent
-     * @description
-     * @createtime 2019/6/12 3:41 PM
+     * title setClickEvent
+     * description
+     * createtime 2019/6/12 3:41 PM
      * @param $clickEvent
      * @return $this
      */
@@ -85,9 +85,9 @@ class Tree extends Assembly
     }
 
     /**
-     * @title setCheckedEvent
-     * @description
-     * @createtime 2019/6/12 3:41 PM
+     * title setCheckedEvent
+     * description
+     * createtime 2019/6/12 3:41 PM
      * @param $checkedEvent
      * @return $this
      */
@@ -107,9 +107,9 @@ class Tree extends Assembly
     }
 
     /**
-     * @title setOperateEvent
-     * @description
-     * @createtime 2019/6/12 3:41 PM
+     * title setOperateEvent
+     * description
+     * createtime 2019/6/12 3:41 PM
      * @param $operateEvent
      * @return $this
      */
@@ -121,9 +121,9 @@ class Tree extends Assembly
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -178,9 +178,9 @@ HTML;
     }
 
     /**
-     * @title setDataField
-     * @description
-     * @createtime 2019/6/12 3:17 PM
+     * title setDataField
+     * description
+     * createtime 2019/6/12 3:17 PM
      * @param array $data
      */
     protected function setDataField(array &$data)
@@ -214,9 +214,9 @@ HTML;
     }
 
     /**
-     * @title setConfig
-     * @description
-     * @createtime 2019/2/28 下午5:41
+     * title setConfig
+     * description
+     * createtime 2019/2/28 下午5:41
      * @param $config
      * @return $this
      */
@@ -228,9 +228,9 @@ HTML;
     }
 
     /**
-     * @title setValue
-     * @description
-     * @createtime 2019/2/28 下午6:12
+     * title setValue
+     * description
+     * createtime 2019/2/28 下午6:12
      * @param string|array $value
      * @return $this|Assembly
      */
@@ -244,9 +244,9 @@ HTML;
     }
 
     /**
-     * @title __call
-     * @description
-     * @createtime 2019/2/26 下午5:25
+     * title __call
+     * description
+     * createtime 2019/2/26 下午5:25
      * @param $name
      * @param $arguments
      * @return $this|mixed|string
@@ -274,9 +274,9 @@ HTML;
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/2/24 下午11:28
+     * title afterSetForm
+     * description
+     * createtime 2019/2/24 下午11:28
      */
     protected function afterSetForm()
     {

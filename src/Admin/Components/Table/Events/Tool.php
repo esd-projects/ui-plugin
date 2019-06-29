@@ -6,11 +6,11 @@
  * Time: 下午10:54
  */
 
-namespace ESD\Plugins\Admin\Table\Events;
+namespace ESD\Plugins\Admin\Components\Table\Events;
 
 
 use ESD\Plugins\Admin\Beans\Layout;
-use ESD\Plugins\Admin\Table\Table;
+use ESD\Plugins\Admin\Components\Table\Table;
 
 class Tool extends Layout
 {
@@ -39,9 +39,9 @@ class Tool extends Layout
     }
 
     /**
-     * @title add
-     * @description
-     * @createtime 2019/3/13 下午7:09
+     * title add
+     * description
+     * createtime 2019/3/13 下午7:09
      * @param string $event
      * @param null $view
      * @param string $title
@@ -76,9 +76,9 @@ HTML
     }
 
     /**
-     * @title event
-     * @description
-     * @createtime 2019/2/26 下午10:56
+     * title event
+     * description
+     * createtime 2019/2/26 下午10:56
      * @param $eventName
      * @param $callback
      * @return $this
@@ -95,9 +95,9 @@ HTML;
     }
 
     /**
-     * @title edit
-     * @description
-     * @createtime 2019/2/26 下午10:57
+     * title edit
+     * description
+     * createtime 2019/2/26 下午10:57
      * @param $view
      * @param string $title
      * @param array $area
@@ -138,9 +138,9 @@ HTML
     }
 
     /**
-     * @title delete
-     * @description
-     * @createtime 2019/2/26 下午11:46
+     * title delete
+     * description
+     * createtime 2019/2/26 下午11:46
      * @param $url
      * @param null $tableName
      * @param array $sendData
@@ -185,9 +185,9 @@ HTML
     }
 
     /**
-     * @title expend
-     * @description
-     * @createtime 2019/2/27 下午4:40
+     * title expend
+     * description
+     * createtime 2019/2/27 下午4:40
      * @param $html
      * @return Tool
      */
@@ -214,9 +214,9 @@ HTML
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()

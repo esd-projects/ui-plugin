@@ -6,10 +6,10 @@
  * Time: 下午11:22
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 /**
  * Class Slider
@@ -36,14 +36,14 @@ use ESD\Plugins\Admin\Form\Assembly;
  * @method Slider getHeight();
  * @method Slider getDisabled();
  * @method Slider getTheme();
- * @package ESD\Plugins\Admin\Form\assembly
+ * @package ESD\Plugins\Admin\Components\Form\assembly
  */
 class Slider extends Assembly
 {
     /**
-     * @title onChange
-     * @description
-     * @createtime 2019/3/10 上午12:04
+     * title onChange
+     * description
+     * createtime 2019/3/10 上午12:04
      * @param $callback
      * @return $this
      * @throws \Exception
@@ -56,9 +56,9 @@ class Slider extends Assembly
     }
 
     /**
-     * @title onChange
-     * @description
-     * @createtime 2019/3/10 上午12:04
+     * title onChange
+     * description
+     * createtime 2019/3/10 上午12:04
      * @param $callback
      * @return $this
      * @throws \Exception
@@ -71,9 +71,9 @@ class Slider extends Assembly
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -88,9 +88,9 @@ HTML;
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/3/9 下午11:25
+     * title afterSetForm
+     * description
+     * createtime 2019/3/9 下午11:25
      */
     protected function afterSetForm()
     {

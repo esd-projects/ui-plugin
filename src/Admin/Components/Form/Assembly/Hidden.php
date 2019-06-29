@@ -6,17 +6,17 @@
  * Time: 下午8:01
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 class Hidden extends Assembly
 {
     /**
-     * @title on
-     * @description
-     * @createtime 2019/3/3 下午9:28
+     * title on
+     * description
+     * createtime 2019/3/3 下午9:28
      * @param $event
      * @param $callback
      * @return $this
@@ -34,9 +34,9 @@ HTML
     }
 
     /**
-     * @title render
-     * @description
-     * @createtime 2019/3/10 下午4:18
+     * title render
+     * description
+     * createtime 2019/3/10 下午4:18
      * @return mixed|string
      */
     public function render()

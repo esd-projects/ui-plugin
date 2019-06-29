@@ -6,7 +6,7 @@
  * Time: 下午6:17
  */
 
-namespace ESD\Plugins\Admin\Form;
+namespace ESD\Plugins\Admin\Components\Form;
 
 
 class Tab extends Inline
@@ -31,9 +31,9 @@ class Tab extends Inline
     }
 
     /**
-     * @title getTitle
-     * @description
-     * @createtime 2019/3/12 下午11:03
+     * title getTitle
+     * description
+     * createtime 2019/3/12 下午11:03
      */
     public function getTitle()
     {
@@ -41,9 +41,9 @@ class Tab extends Inline
     }
 
     /**
-     * @title setTitle
-     * @description
-     * @createtime 2019/3/12 下午11:05
+     * title setTitle
+     * description
+     * createtime 2019/3/12 下午11:05
      * @param $title
      * @return $this
      */
@@ -55,9 +55,9 @@ class Tab extends Inline
     }
 
     /**
-     * @title inline
-     * @description set inline or not inline
-     * @createtime 2019/2/27 下午12:22
+     * title inline
+     * description set inline or not inline
+     * createtime 2019/2/27 下午12:22
      * @param \Closure $inline
      * @return \Closure|Inline
      */
@@ -71,9 +71,9 @@ class Tab extends Inline
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return string
      */
     public function render()

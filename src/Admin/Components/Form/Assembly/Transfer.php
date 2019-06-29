@@ -6,10 +6,10 @@
  * Time: 下午5:11
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 /**
  * Class Transfer
@@ -30,7 +30,7 @@ use ESD\Plugins\Admin\Form\Assembly;
  * @method Transfer getWidth()
  * @method Transfer getHeight()
  *
- * @package ESD\Plugins\Admin\Form\assembly
+ * @package ESD\Plugins\Admin\Components\Form\assembly
  */
 class Transfer extends Assembly
 {
@@ -55,9 +55,9 @@ class Transfer extends Assembly
     }
 
     /**
-     * @title setOnChange
-     * @description
-     * @createtime 2019/6/12 4:23 PM
+     * title setOnChange
+     * description
+     * createtime 2019/6/12 4:23 PM
      * @param $onChange
      * @return Transfer
      */
@@ -69,9 +69,9 @@ class Transfer extends Assembly
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -111,9 +111,9 @@ HTML;
     }
 
     /**
-     * @title setDataField
-     * @description
-     * @createtime 2019/6/12 3:17 PM
+     * title setDataField
+     * description
+     * createtime 2019/6/12 3:17 PM
      * @param array $data
      */
     protected function setDataField(array &$data)
@@ -142,9 +142,9 @@ HTML;
     }
 
     /**
-     * @title setConfig
-     * @description
-     * @createtime 2019/2/28 下午5:41
+     * title setConfig
+     * description
+     * createtime 2019/2/28 下午5:41
      * @param $config
      * @return Transfer
      */
@@ -156,9 +156,9 @@ HTML;
     }
 
     /**
-     * @title setValue
-     * @description
-     * @createtime 2019/2/28 下午6:12
+     * title setValue
+     * description
+     * createtime 2019/2/28 下午6:12
      * @param string|array $value
      * @return Transfer
      */
@@ -172,9 +172,9 @@ HTML;
     }
 
     /**
-     * @title __call
-     * @description
-     * @createtime 2019/2/26 下午5:25
+     * title __call
+     * description
+     * createtime 2019/2/26 下午5:25
      * @param $name
      * @param $arguments
      * @return $this|mixed|string
@@ -202,9 +202,9 @@ HTML;
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/2/24 下午11:28
+     * title afterSetForm
+     * description
+     * createtime 2019/2/24 下午11:28
      */
     protected function afterSetForm()
     {

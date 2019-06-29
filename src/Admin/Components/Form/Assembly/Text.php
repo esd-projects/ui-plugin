@@ -6,10 +6,10 @@
  * Time: 下午5:58
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 class Text extends Assembly
 {
@@ -30,9 +30,9 @@ class Text extends Assembly
     protected $inputClass = ['layui-input'];
 
     /**
-     * @title on
-     * @description
-     * @createtime 2019/3/3 下午9:28
+     * title on
+     * description
+     * createtime 2019/3/3 下午9:28
      * @param $event
      * @param $callback
      * @return $this
@@ -50,9 +50,9 @@ HTML
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -74,9 +74,9 @@ HTML;
     }
 
     /**
-     * @title setInputClass
-     * @description
-     * @createtime 2019/2/24 下午6:41
+     * title setInputClass
+     * description
+     * createtime 2019/2/24 下午6:41
      * @param string $inputClass
      * @return $this
      */
@@ -88,9 +88,9 @@ HTML;
     }
 
     /**
-     * @title setPlaceholder
-     * @description
-     * @createtime 2019/2/24 下午6:39
+     * title setPlaceholder
+     * description
+     * createtime 2019/2/24 下午6:39
      * @param $placeholder
      * @return $this
      */

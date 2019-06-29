@@ -6,12 +6,13 @@
  * Time: 下午1:18
  */
 
-namespace ESD\Plugins\Admin\layout;
+namespace ESD\Plugins\Admin\Components\Layout;
 
 
+use ESD\Plugins\Admin\Beans\Admin;
 use ESD\Plugins\Admin\Beans\Layout;
-use ESD\Plugins\Admin\Widgets\Breadcrumb;
-use ESD\Plugins\Admin\Widgets\Card;
+use ESD\Plugins\Admin\Components\Widgets\Breadcrumb;
+use ESD\Plugins\Admin\Components\Widgets\Card;
 
 class PageView extends Layout
 {
@@ -47,9 +48,9 @@ class PageView extends Layout
     }
 
     /**
-     * @title breadcrumb
-     * @description
-     * @createtime 2019/3/3 下午10:08
+     * title breadcrumb
+     * description
+     * createtime 2019/3/3 下午10:08
      * @param $breadcrumbs
      * @return null|Breadcrumb
      * @throws \Exception
@@ -68,9 +69,9 @@ class PageView extends Layout
     }
 
     /**
-     * @title rows
-     * @description use Closure or string to create an row
-     * @createtime 2019/1/30 下午3:54
+     * title rows
+     * description use Closure or string to create an row
+     * createtime 2019/1/30 下午3:54
      * @param \Closure|string $rows
      * @return PageView
      */
@@ -88,9 +89,9 @@ class PageView extends Layout
     }
 
     /**
-     * @title setRows
-     * @description
-     * @createtime 2019/1/30 下午3:44
+     * title setRows
+     * description
+     * createtime 2019/1/30 下午3:44
      * @param Layout|string $layout
      * @return PageView
      */
@@ -102,9 +103,9 @@ class PageView extends Layout
     }
 
     /**
-     * @title card
-     * @description
-     * @createtime 2019/3/3 下午10:14
+     * title card
+     * description
+     * createtime 2019/3/3 下午10:14
      * @param $cards
      * @param null $title
      * @return $this
@@ -113,7 +114,7 @@ class PageView extends Layout
     {
         if ($cards instanceof \Closure) {
             $cardView = new Card();
-            call($cards, [$cardView]);
+            call_user_func_array($cards, [$cardView]);
             $this->setLayout($cardView);
         } else {
             $this->setLayout(new Card($title, $cards));
@@ -194,9 +195,9 @@ HTML
 
 
     /**
-     * @title formatJavascript
-     * @description get Javascript and format it
-     * @createtime 2019/2/24 下午5:42
+     * title formatJavascript
+     * description get Javascript and format it
+     * createtime 2019/2/24 下午5:42
      * @param bool $returnArr
      * @return string|array
      */
@@ -268,9 +269,9 @@ HTML
     }
 
     /**
-     * @title formatCss
-     * @description get css and format it
-     * @createtime 2019/2/24 下午5:34
+     * title formatCss
+     * description get css and format it
+     * createtime 2019/2/24 下午5:34
      */
     protected function formatStyle()
     {
@@ -291,9 +292,9 @@ HTML
     }
 
     /**
-     * @title formatLayouts
-     * @description
-     * @createtime 2019/3/3 下午10:17
+     * title formatLayouts
+     * description
+     * createtime 2019/3/3 下午10:17
      * @return string
      */
     public function formatLayouts()
@@ -316,9 +317,9 @@ HTML
     }
 
     /**
-     * @title setTitle
-     * @description use for set pageview top title
-     * @createtime 2019/1/30 下午2:44
+     * title setTitle
+     * description use for set pageview top title
+     * createtime 2019/1/30 下午2:44
      * @param string $title
      * @return PageView
      */

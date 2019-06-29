@@ -6,7 +6,7 @@
  * Time: 下午6:17
  */
 
-namespace ESD\Plugins\Admin\Form;
+namespace ESD\Plugins\Admin\Components\Form;
 
 
 use ESD\Plugins\Admin\Beans\Layout;
@@ -31,7 +31,7 @@ use ESD\Plugins\Admin\Beans\Layout;
  * @method Assembly\Tree tree($name, $label)
  * @method Assembly\Upload upload($name, $label)
  * @method Assembly\WangEditor wangeditor($name, $label)
- * @package ESD\Plugins\Admin\Form
+ * @package ESD\Plugins\Admin\Components\Form
  */
 class Inline extends Layout
 {
@@ -57,9 +57,9 @@ class Inline extends Layout
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return string
      */
     public function render()
@@ -73,9 +73,9 @@ class Inline extends Layout
     }
 
     /**
-     * @title __call
-     * @description find assembly
-     * @createtime 2019/2/24 下午4:15
+     * title __call
+     * description find assembly
+     * createtime 2019/2/24 下午4:15
      * @param $method
      * @param $arguments
      * @return mixed
@@ -93,9 +93,9 @@ class Inline extends Layout
     }
 
     /**
-     * @title setAssemblys
-     * @description
-     * @createtime 2019/2/24 下午6:26
+     * title setAssemblys
+     * description
+     * createtime 2019/2/24 下午6:26
      * @param Assembly $assembly
      * @return $this
      */

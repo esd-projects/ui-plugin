@@ -6,14 +6,14 @@
  * Time: 下午4:04
  */
 
-namespace ESD\Plugins\Admin\Table;
+namespace ESD\Plugins\Admin\Components\Table;
 
 use ESD\Plugins\Admin\Beans\Layout;
-use ESD\Plugins\Admin\Form\Form;
-use ESD\Plugins\Admin\Layout\Card;
-use ESD\Plugins\Admin\Layout\PageView;
-use ESD\Plugins\Admin\Table\Events\On;
-use ESD\Plugins\Admin\Table\Events\Tool;
+use ESD\Plugins\Admin\Components\Form\Form;
+use ESD\Plugins\Admin\Components\Layout\Card;
+use ESD\Plugins\Admin\Components\Layout\PageView;
+use ESD\Plugins\Admin\Components\Table\Events\On;
+use ESD\Plugins\Admin\Components\Table\Events\Tool;
 
 /**
  * Class Table
@@ -48,7 +48,7 @@ use ESD\Plugins\Admin\Table\Events\Tool;
  * @method Table getText();
  * @method Table getAutoSort();
  *
- * @package ESD\Plugins\Admin\Table
+ * @package ESD\Plugins\Admin\Components\Table
  */
 class Table extends Layout
 {
@@ -118,9 +118,9 @@ class Table extends Layout
     }
 
     /**
-     * @title search
-     * @description set table's search
-     * @createtime 2019/2/26 下午3:27
+     * title search
+     * description set table's search
+     * createtime 2019/2/26 下午3:27
      * @param \Closure $callback
      * @return Form
      * @throws \Exception
@@ -148,9 +148,9 @@ class Table extends Layout
     }
 
     /**
-     * @title setName
-     * @description
-     * @createtime 2019/2/26 下午3:15
+     * title setName
+     * description
+     * createtime 2019/2/26 下午3:15
      * @param $name
      * @return $this
      */
@@ -164,9 +164,9 @@ class Table extends Layout
     }
 
     /**
-     * @title columns
-     * @description
-     * @createtime 2019/2/26 下午3:56
+     * title columns
+     * description
+     * createtime 2019/2/26 下午3:56
      * @param $field
      * @param $name
      * @return Columns
@@ -191,9 +191,9 @@ class Table extends Layout
     }
 
     /**
-     * @title on
-     * @description
-     * @createtime 2019/3/1 下午6:15
+     * title on
+     * description
+     * createtime 2019/3/1 下午6:15
      * @param \Closure|null $callback
      * @return On
      */
@@ -207,9 +207,9 @@ class Table extends Layout
     }
 
     /**
-     * @title toolbar
-     * @description tool's event
-     * @createtime 2019/2/26 下午7:00
+     * title toolbar
+     * description tool's event
+     * createtime 2019/2/26 下午7:00
      * @param \Closure|null $callback
      * @return string|Tool
      */
@@ -223,9 +223,9 @@ class Table extends Layout
     }
 
     /**
-     * @title toolbar
-     * @description
-     * @createtime 2019/2/27 上午12:37
+     * title toolbar
+     * description
+     * createtime 2019/2/27 上午12:37
      * @param \Closure|null $callback
      * @return Toolbar
      */
@@ -239,9 +239,9 @@ class Table extends Layout
     }
 
     /**
-     * @title show
-     * @description
-     * @createtime 2019/3/3 下午10:49
+     * title show
+     * description
+     * createtime 2019/3/3 下午10:49
      * @param \Closure|null $closure
      * @return mixed
      */
@@ -259,9 +259,9 @@ class Table extends Layout
     }
 
     /**
-     * @title render
-     * @description use for render each type
-     * @createtime 2019/2/26 下午3:41
+     * title render
+     * description use for render each type
+     * createtime 2019/2/26 下午3:41
      * @return mixed|string
      * @throws \Exception
      */
@@ -335,9 +335,9 @@ HTML
     }
 
     /**
-     * @title setConfig
-     * @description
-     * @createtime 2019/2/26 下午3:34
+     * title setConfig
+     * description
+     * createtime 2019/2/26 下午3:34
      * @param $field
      * @param null $value
      * @return $this
@@ -375,9 +375,9 @@ HTML
     }
 
     /**
-     * @title setRestfulUrl
-     * @description
-     * @createtime 2019/2/27 下午2:52
+     * title setRestfulUrl
+     * description
+     * createtime 2019/2/27 下午2:52
      * @param $restfulUrl
      * @return $this
      */
@@ -399,9 +399,9 @@ HTML
     }
 
     /**
-     * @title setEditPath
-     * @description
-     * @createtime 2019/2/27 下午2:53
+     * title setEditPath
+     * description
+     * createtime 2019/2/27 下午2:53
      * @param $editPath
      * @return $this
      */
@@ -413,9 +413,9 @@ HTML
     }
 
     /**
-     * @title __call
-     * @description
-     * @createtime 2019/2/26 下午5:25
+     * title __call
+     * description
+     * createtime 2019/2/26 下午5:25
      * @param $name
      * @param $arguments
      * @return $this|mixed|string

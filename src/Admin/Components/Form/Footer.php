@@ -6,9 +6,10 @@
  * Time: 下午11:21
  */
 
-namespace ESD\Plugins\Admin\Form;
+namespace ESD\Plugins\Admin\Components\Form;
 
 
+use ESD\Plugins\Admin\Beans\Admin;
 use ESD\Plugins\Admin\Beans\Layout;
 
 class Footer extends Layout
@@ -37,9 +38,9 @@ class Footer extends Layout
     }
 
     /**
-     * @title submit
-     * @description
-     * @createtime 2019/2/28 下午2:04
+     * title submit
+     * description
+     * createtime 2019/2/28 下午2:04
      * @param $url
      * @param int $id
      * @param null $successCall
@@ -89,9 +90,9 @@ HTML
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -116,9 +117,9 @@ HTML;
     }
 
     /**
-     * @title setFooter
-     * @description
-     * @createtime 2019/2/25 下午11:35
+     * title setFooter
+     * description
+     * createtime 2019/2/25 下午11:35
      * @param $footer
      * @return $this
      */

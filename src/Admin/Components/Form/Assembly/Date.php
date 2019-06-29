@@ -6,7 +6,7 @@
  * Time: 下午7:10
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
 /**
@@ -16,14 +16,14 @@ namespace ESD\Plugins\Admin\Form\Assembly;
  * @method Date setLang($lang);
  * @method Date setTheme($theme);
  * @method Date setMark(array $mark);
- * @package ESD\Plugins\Admin\Form\assembly
+ * @package ESD\Plugins\Admin\Components\Form\assembly
  */
 class Date extends Text
 {
     /**
-     * @title year
-     * @description
-     * @createtime 2019/2/24 下午7:21
+     * title year
+     * description
+     * createtime 2019/2/24 下午7:21
      * @throws \Exception
      */
     public function year()
@@ -34,9 +34,9 @@ class Date extends Text
     }
 
     /**
-     * @title month
-     * @description
-     * @createtime 2019/2/24 下午7:21
+     * title month
+     * description
+     * createtime 2019/2/24 下午7:21
      * @throws \Exception
      */
     public function month()
@@ -47,9 +47,9 @@ class Date extends Text
     }
 
     /**
-     * @title time
-     * @description
-     * @createtime 2019/2/24 下午7:21
+     * title time
+     * description
+     * createtime 2019/2/24 下午7:21
      * @throws \Exception
      */
     public function time()
@@ -60,9 +60,9 @@ class Date extends Text
     }
 
     /**
-     * @title datetime
-     * @description
-     * @createtime 2019/2/24 下午7:21
+     * title datetime
+     * description
+     * createtime 2019/2/24 下午7:21
      * @throws \Exception
      */
     public function datetime()
@@ -73,9 +73,9 @@ class Date extends Text
     }
 
     /**
-     * @title range
-     * @description
-     * @createtime 2019/2/25 下午11:16
+     * title range
+     * description
+     * createtime 2019/2/25 下午11:16
      * @param string $range
      * @return $this
      * @throws \Exception
@@ -88,9 +88,9 @@ class Date extends Text
     }
 
     /**
-     * @title format
-     * @description
-     * @createtime 2019/2/25 下午11:16
+     * title format
+     * description
+     * createtime 2019/2/25 下午11:16
      * @param $format
      * @return $this
      * @throws \Exception
@@ -103,9 +103,9 @@ class Date extends Text
     }
 
     /**
-     * @title min
-     * @description
-     * @createtime 2019/2/24 下午7:27
+     * title min
+     * description
+     * createtime 2019/2/24 下午7:27
      * @param $datetime
      * @return $this
      * @throws \Exception
@@ -118,9 +118,9 @@ class Date extends Text
     }
 
     /**
-     * @title max
-     * @description
-     * @createtime 2019/2/24 下午7:27
+     * title max
+     * description
+     * createtime 2019/2/24 下午7:27
      * @param $datetime
      * @return $this
      * @throws \Exception
@@ -133,9 +133,9 @@ class Date extends Text
     }
 
     /**
-     * @title calendar
-     * @description
-     * @createtime 2019/2/24 下午7:29
+     * title calendar
+     * description
+     * createtime 2019/2/24 下午7:29
      * @return $this
      * @throws \Exception
      */
@@ -147,9 +147,9 @@ class Date extends Text
     }
 
     /**
-     * @title onChange
-     * @description
-     * @createtime 2019/2/24 下午7:31
+     * title onChange
+     * description
+     * createtime 2019/2/24 下午7:31
      * @param $callback
      * @return $this
      * @throws \Exception
@@ -162,9 +162,9 @@ class Date extends Text
     }
 
     /**
-     * @title onReady
-     * @description
-     * @createtime 2019/2/24 下午7:45
+     * title onReady
+     * description
+     * createtime 2019/2/24 下午7:45
      * @param $callback
      * @return $this
      * @throws \Exception
@@ -177,9 +177,9 @@ class Date extends Text
     }
 
     /**
-     * @title onDone
-     * @description
-     * @createtime 2019/2/24 下午7:45
+     * title onDone
+     * description
+     * createtime 2019/2/24 下午7:45
      * @param $callback
      * @return $this
      * @throws \Exception
@@ -192,9 +192,9 @@ class Date extends Text
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/2/24 下午7:17
+     * title afterSetForm
+     * description
+     * createtime 2019/2/24 下午7:17
      * @throws \Exception
      */
     protected function afterSetForm()

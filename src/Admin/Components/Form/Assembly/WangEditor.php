@@ -6,10 +6,10 @@
  * Time: 下午6:51
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 /**
  * Class WangEditor
@@ -69,14 +69,14 @@ use ESD\Plugins\Admin\Form\Assembly;
  * @method WangEditor getWithCredentials();
  * @method WangEditor getUploadImgTimeout();
  *
- * @package ESD\Plugins\Admin\Form\assembly
+ * @package ESD\Plugins\Admin\Components\Form\assembly
  */
 class WangEditor extends Assembly
 {
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -96,9 +96,9 @@ HTML;
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/3/2 下午7:05
+     * title afterSetForm
+     * description
+     * createtime 2019/3/2 下午7:05
      */
     protected function afterSetForm()
     {

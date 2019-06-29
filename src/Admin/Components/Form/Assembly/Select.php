@@ -6,10 +6,10 @@
  * Time: 下午6:49
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 class Select extends Assembly
 {
@@ -29,9 +29,9 @@ class Select extends Assembly
     protected $optionsArray = [];
 
     /**
-     * @title options
-     * @description
-     * @createtime 2019/2/24 下午8:38
+     * title options
+     * description
+     * createtime 2019/2/24 下午8:38
      * @param array $optionsArray
      * @return $this
      */
@@ -43,9 +43,9 @@ class Select extends Assembly
     }
 
     /**
-     * @title on
-     * @description
-     * @createtime 2019/3/3 下午9:44
+     * title on
+     * description
+     * createtime 2019/3/3 下午9:44
      * @param $callback
      * @return $this
      */
@@ -61,9 +61,9 @@ HTML
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -100,9 +100,9 @@ HTML;
     }
 
     /**
-     * @title setPlaceholder
-     * @description
-     * @createtime 2019/2/24 下午6:39
+     * title setPlaceholder
+     * description
+     * createtime 2019/2/24 下午6:39
      * @param $placeholder
      * @return $this
      */
@@ -138,9 +138,9 @@ HTML;
     }
 
     /**
-     * @title checkValue
-     * @description base value checked
-     * @createtime 2019/2/28 上午11:36
+     * title checkValue
+     * description base value checked
+     * createtime 2019/2/28 上午11:36
      * @param array $option
      * @return string
      */
@@ -166,9 +166,9 @@ HTML;
     }
 
     /**
-     * @title setInputClass
-     * @description
-     * @createtime 2019/2/24 下午6:41
+     * title setInputClass
+     * description
+     * createtime 2019/2/24 下午6:41
      * @param string $inputClass
      * @return $this
      */

@@ -6,7 +6,7 @@
  * Time: 下午5:16
  */
 
-namespace ESD\Plugins\Admin\Widgets;
+namespace ESD\Plugins\Admin\Components\Widgets;
 
 class Breadcrumb
 {
@@ -43,9 +43,9 @@ class Breadcrumb
     }
 
     /**
-     * @title setBreadcrumb
-     * @description use for set pageview breadcrumb
-     * @createtime 2019/1/30 下午2:52
+     * title setBreadcrumb
+     * description use for set pageview breadcrumb
+     * createtime 2019/1/30 下午2:52
      * @param array $breadcrumb
      * @return $this
      * @throws \Exception
@@ -61,9 +61,9 @@ class Breadcrumb
     }
 
     /**
-     * @title validateBreadcrumb
-     * @description use for validate breadcrumb is a validate array
-     * @createtime 2019/1/30 下午2:51
+     * title validateBreadcrumb
+     * description use for validate breadcrumb is a validate array
+     * createtime 2019/1/30 下午2:51
      * @param array $breadcrumbs
      * @throws \Exception
      */
@@ -77,9 +77,9 @@ class Breadcrumb
     }
 
     /**
-     * @title setHomeText
-     * @description
-     * @createtime 2019/2/24 下午5:23
+     * title setHomeText
+     * description
+     * createtime 2019/2/24 下午5:23
      * @param $homeText
      * @return $this
      */
@@ -91,9 +91,9 @@ class Breadcrumb
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()

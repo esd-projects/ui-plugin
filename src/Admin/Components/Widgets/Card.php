@@ -6,7 +6,7 @@
  * Time: 下午12:05
  */
 
-namespace ESD\Plugins\Admin\Widgets;
+namespace ESD\Plugins\Admin\Components\Widgets;
 
 
 use ESD\Plugins\Admin\Beans\Layout;
@@ -54,9 +54,9 @@ class Card extends Layout
     }
 
     /**
-     * @title setTitle
-     * @description
-     * @createtime 2019/2/18 下午12:37
+     * title setTitle
+     * description
+     * createtime 2019/2/18 下午12:37
      * @param $title
      * @return Card
      */
@@ -71,9 +71,9 @@ class Card extends Layout
     }
 
     /**
-     * @title setContent
-     * @description set card content
-     * @createtime 2019/2/18 下午12:07
+     * title setContent
+     * description set card content
+     * createtime 2019/2/18 下午12:07
      * @param $content
      * @return Card
      */
@@ -88,9 +88,9 @@ class Card extends Layout
     }
 
     /**
-     * @title setHeaderClass
-     * @description
-     * @createtime 2019/2/27 下午12:15
+     * title setHeaderClass
+     * description
+     * createtime 2019/2/27 下午12:15
      * @param $headerClass
      * @return $this
      */
@@ -102,9 +102,9 @@ class Card extends Layout
     }
 
     /**
-     * @title setContentClass
-     * @description
-     * @createtime 2019/2/27 下午12:15
+     * title setContentClass
+     * description
+     * createtime 2019/2/27 下午12:15
      * @param $contentClass
      * @return $this
      */
@@ -116,9 +116,9 @@ class Card extends Layout
     }
 
     /**
-     * @title render
-     * @description use for render each type
-     * @createtime 2019/1/30 下午3:10
+     * title render
+     * description use for render each type
+     * createtime 2019/1/30 下午3:10
      * @return mixed
      */
     public function render()

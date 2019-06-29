@@ -6,11 +6,11 @@
  * Time: 下午12:02
  */
 
-namespace ESD\Plugins\Admin\Table\Events;
+namespace ESD\Plugins\Admin\Components\Table\Events;
 
 
 use ESD\Plugins\Admin\Beans\Layout;
-use ESD\Plugins\Admin\Table\Table;
+use ESD\Plugins\Admin\Components\Table\Table;
 
 class Toolbar extends Layout
 {
@@ -39,9 +39,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title eventAdd
-     * @description
-     * @createtime 2019/2/27 上午1:20
+     * title eventAdd
+     * description
+     * createtime 2019/2/27 上午1:20
      * @param $view
      * @param string $title
      * @param array $area
@@ -75,9 +75,9 @@ HTML
     }
 
     /**
-     * @title event
-     * @description
-     * @createtime 2019/2/26 下午10:56
+     * title event
+     * description
+     * createtime 2019/2/26 下午10:56
      * @param $eventName
      * @param $callback
      * @return $this
@@ -94,9 +94,9 @@ HTML;
     }
 
     /**
-     * @title eventDelete
-     * @description
-     * @createtime 2019/2/27 上午1:20
+     * title eventDelete
+     * description
+     * createtime 2019/2/27 上午1:20
      * @param $url
      * @param array $sendData
      * @param null $afterDelete
@@ -133,9 +133,9 @@ HTML
     }
 
     /**
-     * @title xlsx
-     * @description
-     * @createtime 2019/3/10 下午4:59
+     * title xlsx
+     * description
+     * createtime 2019/3/10 下午4:59
      * @param $url
      * @param string $parseData
      * @param string $afterReload
@@ -193,9 +193,9 @@ HTML
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()

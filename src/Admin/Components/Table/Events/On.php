@@ -6,11 +6,11 @@
  * Time: 下午5:54
  */
 
-namespace ESD\Plugins\Admin\Table\Events;
+namespace ESD\Plugins\Admin\Components\Table\Events;
 
 
 use ESD\Plugins\Admin\Beans\Layout;
-use ESD\Plugins\Admin\Table\Table;
+use ESD\Plugins\Admin\Components\Table\Table;
 
 class On extends Layout
 {
@@ -34,9 +34,9 @@ class On extends Layout
     }
 
     /**
-     * @title checkbox
-     * @description
-     * @createtime 2019/3/1 下午5:59
+     * title checkbox
+     * description
+     * createtime 2019/3/1 下午5:59
      * @param null $callback
      * @return On
      */
@@ -46,9 +46,9 @@ class On extends Layout
     }
 
     /**
-     * @title event
-     * @description
-     * @createtime 2019/3/1 下午5:59
+     * title event
+     * description
+     * createtime 2019/3/1 下午5:59
      * @param $eventName
      * @param $callback
      * @return $this
@@ -66,9 +66,9 @@ HTML
     }
 
     /**
-     * @title row
-     * @description
-     * @createtime 2019/3/1 下午6:06
+     * title row
+     * description
+     * createtime 2019/3/1 下午6:06
      * @param $callback
      * @return On
      */
@@ -78,9 +78,9 @@ HTML
     }
 
     /**
-     * @title rowDouble
-     * @description
-     * @createtime 2019/3/1 下午6:06
+     * title rowDouble
+     * description
+     * createtime 2019/3/1 下午6:06
      * @param $callback
      * @return On
      */
@@ -90,9 +90,9 @@ HTML
     }
 
     /**
-     * @title sort
-     * @description
-     * @createtime 2019/3/1 下午6:12
+     * title sort
+     * description
+     * createtime 2019/3/1 下午6:12
      * @param $callback
      * @return On
      */
@@ -102,9 +102,9 @@ HTML
     }
 
     /**
-     * @title edit
-     * @description
-     * @createtime 2019/3/1 下午6:04
+     * title edit
+     * description
+     * createtime 2019/3/1 下午6:04
      * @param null $url
      * @param null $callback
      * @return On
@@ -127,9 +127,9 @@ HTML;
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()

@@ -58,7 +58,7 @@ layui.define(['jquery', 'layer', 'laytpl'], function (exports) {
 
         //视图模板的配置
         view: {
-            home: "/index",
+            home: "/esd_admin/index",
             index: "index",
             path: "./iframe/",
             suffix: ".html",

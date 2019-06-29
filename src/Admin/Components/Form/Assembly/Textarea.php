@@ -6,7 +6,7 @@
  * Time: 下午5:58
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
 class Textarea extends Text
@@ -17,9 +17,9 @@ class Textarea extends Text
     protected $inputClass = ['layui-textarea'];
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()

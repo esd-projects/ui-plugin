@@ -6,7 +6,7 @@
  * Time: 下午1:48
  */
 
-namespace ESD\Plugins\Admin\Form;
+namespace ESD\Plugins\Admin\Components\Form;
 
 
 use ESD\Plugins\Admin\Beans\Layout;
@@ -69,9 +69,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title init
-     * @description
-     * @createtime 2019/2/24 下午7:14
+     * title init
+     * description
+     * createtime 2019/2/24 下午7:14
      */
     protected function init()
     {
@@ -86,9 +86,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title setName
-     * @description
-     * @createtime 2019/2/24 下午2:18
+     * title setName
+     * description
+     * createtime 2019/2/24 下午2:18
      * @param $name
      * @return $this
      */
@@ -108,9 +108,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title setLabel
-     * @description
-     * @createtime 2019/2/24 下午2:18
+     * title setLabel
+     * description
+     * createtime 2019/2/24 下午2:18
      * @param $label
      * @return $this
      */
@@ -130,9 +130,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title setValue
-     * @description
-     * @createtime 2019/2/24 下午2:40
+     * title setValue
+     * description
+     * createtime 2019/2/24 下午2:40
      * @param $value
      * @return $this
      */
@@ -144,9 +144,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title getClass
-     * @description get assembly's class
-     * @createtime 2019/2/24 下午4:01
+     * title getClass
+     * description get assembly's class
+     * createtime 2019/2/24 下午4:01
      * @return string
      */
     public function getClass()
@@ -155,9 +155,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title setClass
-     * @description
-     * @createtime 2019/2/24 下午2:40
+     * title setClass
+     * description
+     * createtime 2019/2/24 下午2:40
      * @param $class
      * @return $this
      */
@@ -181,9 +181,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title setId
-     * @description
-     * @createtime 2019/2/24 下午2:40
+     * title setId
+     * description
+     * createtime 2019/2/24 下午2:40
      * @param $id
      * @return $this
      */
@@ -195,9 +195,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title offAttributes
-     * @description
-     * @createtime 2019/2/25 下午6:00
+     * title offAttributes
+     * description
+     * createtime 2019/2/25 下午6:00
      * @param $field
      * @return $this
      */
@@ -225,9 +225,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title setAttributes
-     * @description
-     * @createtime 2019/2/24 下午4:35
+     * title setAttributes
+     * description
+     * createtime 2019/2/24 下午4:35
      * @param $field
      * @param null $value
      * @return $this
@@ -249,9 +249,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title setForm
-     * @description
-     * @createtime 2019/2/24 下午2:17
+     * title setForm
+     * description
+     * createtime 2019/2/24 下午2:17
      * @param Form $form
      * @return $this
      */
@@ -265,18 +265,18 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/2/24 下午7:14
+     * title afterSetForm
+     * description
+     * createtime 2019/2/24 下午7:14
      */
     protected function afterSetForm()
     {
     }
 
     /**
-     * @title __call
-     * @description
-     * @createtime 2019/3/2 下午7:17
+     * title __call
+     * description
+     * createtime 2019/3/2 下午7:17
      * @param $name
      * @param $arguments
      * @return $this|string
@@ -304,9 +304,9 @@ abstract class Assembly extends Layout
     }
 
     /**
-     * @title parseFieldName
-     * @description parse zIndex to z-index
-     * @createtime 2019/3/3 下午6:52
+     * title parseFieldName
+     * description parse zIndex to z-index
+     * createtime 2019/3/3 下午6:52
      * @param $name
      * @return string
      */

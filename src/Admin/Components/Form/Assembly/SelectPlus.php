@@ -6,15 +6,15 @@
  * Time: 下午11:26
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
 class SelectPlus extends Select
 {
     /**
-     * @title direction
-     * @description select direction
-     * @createtime 2019/2/25 上午12:02
+     * title direction
+     * description select direction
+     * createtime 2019/2/25 上午12:02
      * @param string $mode
      * @return $this
      * @throws \Exception
@@ -27,9 +27,9 @@ class SelectPlus extends Select
     }
 
     /**
-     * @title radio
-     * @description
-     * @createtime 2019/2/25 上午12:06
+     * title radio
+     * description
+     * createtime 2019/2/25 上午12:06
      * @return $this
      * @throws \Exception
      */
@@ -41,9 +41,9 @@ class SelectPlus extends Select
     }
 
     /**
-     * @title count
-     * @description
-     * @createtime 2019/2/25 上午12:07
+     * title count
+     * description
+     * createtime 2019/2/25 上午12:07
      * @param $count
      * @return $this
      * @throws \Exception
@@ -56,9 +56,9 @@ class SelectPlus extends Select
     }
 
     /**
-     * @title search
-     * @description
-     * @createtime 2019/2/25 上午12:28
+     * title search
+     * description
+     * createtime 2019/2/25 上午12:28
      * @param string $search
      * @param string $type
      * @return $this
@@ -74,9 +74,9 @@ class SelectPlus extends Select
     }
 
     /**
-     * @title skin
-     * @description
-     * @createtime 2019/2/25 上午12:27
+     * title skin
+     * description
+     * createtime 2019/2/25 上午12:27
      * @param string $skin
      * @return $this
      * @throws \Exception
@@ -89,9 +89,9 @@ class SelectPlus extends Select
     }
 
     /**
-     * @title template
-     * @description set template
-     * @createtime 2019/2/25 上午11:26
+     * title template
+     * description set template
+     * createtime 2019/2/25 上午11:26
      * @param $template
      * @return $this
      * @throws \Exception
@@ -104,9 +104,9 @@ class SelectPlus extends Select
     }
 
     /**
-     * @title linkage
-     * @description
-     * @createtime 2019/2/25 上午11:41
+     * title linkage
+     * description
+     * createtime 2019/2/25 上午11:41
      * @param $data
      * @param int $width
      * @return $this
@@ -139,9 +139,9 @@ HTML
     }
 
     /**
-     * @title setJsValue
-     * @description
-     * @createtime 2019/3/6 下午2:26
+     * title setJsValue
+     * description
+     * createtime 2019/3/6 下午2:26
      * @param array $value
      */
     public function setJsValue(array $value)
@@ -156,9 +156,9 @@ HTML
     }
 
     /**
-     * @title on
-     * @description
-     * @createtime 2019/2/25 下午12:03
+     * title on
+     * description
+     * createtime 2019/2/25 下午12:03
      * @param $callback
      * @param bool $isNow
      * @return $this
@@ -177,9 +177,9 @@ HTML
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/2/24 下午11:28
+     * title afterSetForm
+     * description
+     * createtime 2019/2/24 下午11:28
      */
     protected function afterSetForm()
     {

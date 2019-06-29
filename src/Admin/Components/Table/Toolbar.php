@@ -6,10 +6,10 @@
  * Time: 上午12:35
  */
 
-namespace ESD\Plugins\Admin\Table;
+namespace ESD\Plugins\Admin\Components\Table;
 
 use ESD\Plugins\Admin\Beans\Layout;
-use ESD\Plugins\Admin\Table\Events\Toolbar as ToolbarEvent;
+use ESD\Plugins\Admin\Components\Table\Events\Toolbar as ToolbarEvent;
 
 class Toolbar extends Layout
 {
@@ -43,9 +43,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title add
-     * @description
-     * @createtime 2019/3/4 下午4:05
+     * title add
+     * description
+     * createtime 2019/3/4 下午4:05
      * @return Toolbar
      */
     public function add()
@@ -54,9 +54,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title button
-     * @description
-     * @createtime 2019/3/10 下午4:49
+     * title button
+     * description
+     * createtime 2019/3/10 下午4:49
      * @param $text
      * @param $event
      * @param $icon
@@ -73,9 +73,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title tool
-     * @description
-     * @createtime 2019/2/26 下午5:36
+     * title tool
+     * description
+     * createtime 2019/2/26 下午5:36
      * @param $html
      * @return $this
      */
@@ -87,9 +87,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title delete
-     * @description
-     * @createtime 2019/2/27 上午1:11
+     * title delete
+     * description
+     * createtime 2019/2/27 上午1:11
      * @return Toolbar
      */
     public function delete()
@@ -98,9 +98,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title xlsx
-     * @description
-     * @createtime 2019/3/4 下午4:58
+     * title xlsx
+     * description
+     * createtime 2019/3/4 下午4:58
      * @return Toolbar
      */
     public function xlsx()
@@ -113,9 +113,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title event
-     * @description
-     * @createtime 2019/2/27 下午12:05
+     * title event
+     * description
+     * createtime 2019/2/27 下午12:05
      * @param \Closure|null $callback
      * @return ToolbarEvent
      */
@@ -127,9 +127,9 @@ class Toolbar extends Layout
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()

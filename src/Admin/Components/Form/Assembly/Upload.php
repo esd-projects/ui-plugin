@@ -6,8 +6,10 @@
  * Time: 下午3:25
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
+
+use ESD\Plugins\Admin\Beans\Admin;
 
 /**
  * Class Upload
@@ -28,7 +30,7 @@ namespace ESD\Plugins\Admin\Form\Assembly;
  * @method Upload getSize()
  * @method Upload getMultiple()
  * @method Upload getNumber()
- * @package ESD\Plugins\Admin\Form\assembly
+ * @package ESD\Plugins\Admin\Components\Form\assembly
  */
 class Upload extends Button
 {
@@ -43,9 +45,9 @@ class Upload extends Button
     protected $buttonHtml = '<div class="thinkeradmin-upload-list"></div>';
 
     /**
-     * @title isFile
-     * @description
-     * @createtime 2019/3/3 下午10:05
+     * title isFile
+     * description
+     * createtime 2019/3/3 下午10:05
      * @return Upload
      */
     public function isFile()
@@ -54,9 +56,9 @@ class Upload extends Button
     }
 
     /**
-     * @title multi
-     * @description
-     * @createtime 2019/2/25 下午5:02
+     * title multi
+     * description
+     * createtime 2019/2/25 下午5:02
      * @throws \Exception
      */
     public function multi()
@@ -67,9 +69,9 @@ class Upload extends Button
     }
 
     /**
-     * @title offFancybox
-     * @description
-     * @createtime 2019/2/25 下午6:01
+     * title offFancybox
+     * description
+     * createtime 2019/2/25 下午6:01
      * @return $this
      */
     public function offFancybox()
@@ -80,9 +82,9 @@ class Upload extends Button
     }
 
     /**
-     * @title setName
-     * @description
-     * @createtime 2019/3/21 下午8:06
+     * title setName
+     * description
+     * createtime 2019/3/21 下午8:06
      * @param $name
      * @return $this|Button
      * @throws \Exception
@@ -141,9 +143,9 @@ HTML
     }
 
     /**
-     * @title afterSetForm
-     * @description
-     * @createtime 2019/2/25 下午11:19
+     * title afterSetForm
+     * description
+     * createtime 2019/2/25 下午11:19
      * @throws \Exception
      */
     protected function afterSetForm()

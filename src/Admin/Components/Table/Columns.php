@@ -6,7 +6,7 @@
  * Time: 下午3:49
  */
 
-namespace ESD\Plugins\Admin\Table;
+namespace ESD\Plugins\Admin\Components\Table;
 
 use ESD\Plugins\Admin\Beans\Layout;
 
@@ -52,7 +52,7 @@ use ESD\Plugins\Admin\Beans\Layout;
  * @method Columns getRowspan()
  * @method Columns getTemplet()
  * @method Columns getToolbar()
- * @package ESD\Plugins\Admin\Table
+ * @package ESD\Plugins\Admin\Components\Table
  */
 class Columns extends Layout
 {
@@ -93,9 +93,9 @@ class Columns extends Layout
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()
@@ -136,9 +136,9 @@ HTML;
     }
 
     /**
-     * @title edit
-     * @description
-     * @createtime 2019/2/26 下午5:39
+     * title edit
+     * description
+     * createtime 2019/2/26 下午5:39
      * @return Columns
      */
     public function edit()
@@ -147,9 +147,9 @@ HTML;
     }
 
     /**
-     * @title button
-     * @description
-     * @createtime 2019/3/7 下午9:20
+     * title button
+     * description
+     * createtime 2019/3/7 下午9:20
      * @param $text
      * @param $event
      * @param $icon
@@ -168,9 +168,9 @@ HTML;
     }
 
     /**
-     * @title tool
-     * @description
-     * @createtime 2019/2/26 下午5:36
+     * title tool
+     * description
+     * createtime 2019/2/26 下午5:36
      * @param $html
      * @return $this
      */
@@ -182,9 +182,9 @@ HTML;
     }
 
     /**
-     * @title edit
-     * @description
-     * @createtime 2019/2/26 下午5:39
+     * title edit
+     * description
+     * createtime 2019/2/26 下午5:39
      * @return Columns
      */
     public function delete()
@@ -193,9 +193,9 @@ HTML;
     }
 
     /**
-     * @title expend
-     * @description expend this row
-     * @createtime 2019/2/27 下午4:11
+     * title expend
+     * description expend this row
+     * createtime 2019/2/27 下午4:11
      */
     public function expend()
     {
@@ -205,9 +205,9 @@ HTML;
     }
 
     /**
-     * @title setSwitchTemplet
-     * @description
-     * @createtime 2019/3/1 下午2:39
+     * title setSwitchTemplet
+     * description
+     * createtime 2019/3/1 下午2:39
      * @param $field
      * @param null $url
      * @param array $config
@@ -248,9 +248,9 @@ HTML
     }
 
     /**
-     * @title setFullTemplet
-     * @description
-     * @createtime 2019/2/28 下午2:54
+     * title setFullTemplet
+     * description
+     * createtime 2019/2/28 下午2:54
      * @param $id
      * @param $fullTemplet
      * @return $this
@@ -263,9 +263,9 @@ HTML
     }
 
     /**
-     * @title __call
-     * @description
-     * @createtime 2019/2/26 下午5:25
+     * title __call
+     * description
+     * createtime 2019/2/26 下午5:25
      * @param $name
      * @param $arguments
      * @return $this|mixed|string

@@ -6,19 +6,19 @@
  * Time: 下午11:17
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 class Html extends Assembly
 {
     protected $plain = false;
 
     /**
-     * @title plain
-     * @description
-     * @createtime 2019/3/9 下午11:19
+     * title plain
+     * description
+     * createtime 2019/3/9 下午11:19
      * @return $this
      */
     public function plain()
@@ -29,9 +29,9 @@ class Html extends Assembly
     }
 
     /**
-     * @title render
-     * @description render html
-     * @createtime 2019/2/24 下午4:25
+     * title render
+     * description render html
+     * createtime 2019/2/24 下午4:25
      * @return mixed
      */
     public function render()

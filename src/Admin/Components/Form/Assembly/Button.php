@@ -6,9 +6,9 @@
  * Time: 下午4:44
  */
 
-namespace ESD\Plugins\Admin\Form\Assembly;
+namespace ESD\Plugins\Admin\Components\Form\Assembly;
 
-use ESD\Plugins\Admin\Form\Assembly;
+use ESD\Plugins\Admin\Components\Form\Assembly;
 
 class Button extends Assembly
 {
@@ -33,9 +33,9 @@ class Button extends Assembly
     protected $haveLabel = true;
 
     /**
-     * @title primary
-     * @description set btn class to primary
-     * @createtime 2019/2/24 下午3:59
+     * title primary
+     * description set btn class to primary
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function primary()
@@ -46,9 +46,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title normal
-     * @description set btn class to normal
-     * @createtime 2019/2/24 下午3:59
+     * title normal
+     * description set btn class to normal
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function normal()
@@ -59,9 +59,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title warm
-     * @description set btn class to warm
-     * @createtime 2019/2/24 下午3:59
+     * title warm
+     * description set btn class to warm
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function warm()
@@ -72,9 +72,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title danger
-     * @description set btn class to danger
-     * @createtime 2019/2/24 下午3:59
+     * title danger
+     * description set btn class to danger
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function danger()
@@ -85,9 +85,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title disabled
-     * @description set btn class to disabled
-     * @createtime 2019/2/24 下午3:59
+     * title disabled
+     * description set btn class to disabled
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function disabled()
@@ -98,9 +98,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title lg
-     * @description set btn class to lg
-     * @createtime 2019/2/24 下午3:59
+     * title lg
+     * description set btn class to lg
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function lg()
@@ -111,9 +111,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title sm
-     * @description set btn class to sm
-     * @createtime 2019/2/24 下午3:59
+     * title sm
+     * description set btn class to sm
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function sm()
@@ -124,9 +124,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title xs
-     * @description set btn class to xs
-     * @createtime 2019/2/24 下午3:59
+     * title xs
+     * description set btn class to xs
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function xs()
@@ -137,9 +137,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title radius
-     * @description set btn class to radius
-     * @createtime 2019/2/24 下午3:59
+     * title radius
+     * description set btn class to radius
+     * createtime 2019/2/24 下午3:59
      * @return $this
      */
     public function radius()
@@ -150,9 +150,9 @@ class Button extends Assembly
     }
 
     /**
-     * @title on
-     * @description
-     * @createtime 2019/3/3 下午9:28
+     * title on
+     * description
+     * createtime 2019/3/3 下午9:28
      * @param $event
      * @param $callback
      * @return $this
@@ -170,9 +170,9 @@ HTML
     }
 
     /**
-     * @title render
-     * @description
-     * @createtime 2019/2/24 下午3:59
+     * title render
+     * description
+     * createtime 2019/2/24 下午3:59
      * @return mixed|string
      */
     public function render()
@@ -198,9 +198,9 @@ HTML
     }
 
     /**
-     * @title setButtonClass
-     * @description
-     * @createtime 2019/3/3 下午9:27
+     * title setButtonClass
+     * description
+     * createtime 2019/3/3 下午9:27
      * @param $buttonClass
      * @return $this
      */
@@ -220,9 +220,9 @@ HTML
     }
 
     /**
-     * @title setText
-     * @description
-     * @createtime 2019/3/3 下午9:29
+     * title setText
+     * description
+     * createtime 2019/3/3 下午9:29
      * @param $text
      * @return $this
      */
@@ -242,9 +242,9 @@ HTML
     }
 
     /**
-     * @title setButtonHtml
-     * @description
-     * @createtime 2019/3/3 下午9:42
+     * title setButtonHtml
+     * description
+     * createtime 2019/3/3 下午9:42
      * @param $buttonHtml
      * @return $this
      */
@@ -256,9 +256,9 @@ HTML
     }
 
     /**
-     * @title setHaveLabel
-     * @description
-     * @createtime 2019/3/4 下午12:54
+     * title setHaveLabel
+     * description
+     * createtime 2019/3/4 下午12:54
      * @param bool $haveLabel
      * @return $this
      */
