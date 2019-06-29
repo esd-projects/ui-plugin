@@ -123,22 +123,62 @@ class PageView extends Layout
     }
 
     /**
-     * @title render
-     * @description use for render each type
-     * @createtime 2019/1/30 下午3:10
+     *  render
+     * use for render each type
+     *  2019/1/30 下午3:10
      * @return mixed
      */
-    public function render()
+    public function render($iframe = true)
     {
-        if (input('param.__iframe')) {
-            return view(env("root_path") . DS . "public" . DS . "thinker-admin" . DS . "iframe" . DS . "index.html", array_merge($this->formatScript(true), [
+        if ($iframe) {
+            $html = '<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>$title</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/thinker-admin/lib/css/fancybox.css" media="all">
+    <link rel="stylesheet" href="/thinker-admin/style/admin.css" media="all">
+    <link rel="stylesheet" href="/thinker-admin/style/antdesign.css" media="all">
+    <style>.layui-layer-content{height: calc(100% - 80px);}html,body{overflow-y: scroll !important;}</style>
+    $styles
+</head>
+<body>
+$breadcrumb
+<div class="layui-fluid">
+    $layouts
+</div>
+<script src="/layui/layui.js"></script>
+<script src="/thinker-admin/lib/extend/fancybox.js"></script>
+$files
+<script>
+    layui.layer = window.layer = parent.layui.layer;
+    layui.config({
+        version: (new Date()).getTime()
+    }).extend({
+        thinkeradmin: "/thinker-admin/thinkeradmin",
+        ices: "../ices.min"
+    }).use(["thinkeradmin", "ices", "index"], function(){
+       $css
+       $use
+    });
+</script>
+</body>
+</html>';
+            foreach (array_merge($this->formatScript(true), [
                 'title' => $this->title,
                 'styles' => $this->formatStyle(),
                 'breadcrumb' => $this->getBreadcrumb(),
                 'layouts' => $this->formatLayouts()
-            ]))->send();
+            ]) as $item => $value) {
+                $html = str_replace('$' . $item, htmlspecialchars_decode($value), $html);
+            }
+
         } else {
-            return response(<<<HTML
+            $html = (<<<HTML
 <title>{$this->title}</title>
 {$this->formatStyle()}
 {$this->getBreadcrumb()}
@@ -149,7 +189,9 @@ class PageView extends Layout
 HTML
             );
         }
+        return $html;
     }
+
 
     /**
      * @title formatJavascript
