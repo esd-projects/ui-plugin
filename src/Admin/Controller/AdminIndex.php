@@ -65,7 +65,7 @@ class AdminIndex extends AdminBase
      */
     public function config()
     {
-        $json = json_decode('[{"id":1,"name":"thinkersystem","title":"Admin管理","jump":"thinkersystem","icon":"layui-icon-set","list":[{"id":2,"name":"thinkersystem-rules","title":"Rules管理","jump":"\/thinkersystem\/rules","icon":null,"list":[]},{"id":3,"name":"thinkersystem-menu","title":"Menus管理","jump":"\/thinkersystem\/menus","icon":null,"list":[]},{"id":4,"name":"thinkersystem-role","title":"Roles管理","jump":"\/thinkersystem\/roles","icon":null,"list":[]},{"id":5,"name":"thinkersystem-member","title":"Members管理","jump":"\/thinkersystem\/members","icon":null,"list":[]},{"id":6,"name":"thinkersystem-configs","title":"网站设置","jump":"\/thinkersystem\/configs","icon":"","list":[]}]}]', true);
+        $json = json_decode('[ { "id":1, "name":"thinkersystem", "title":"Admin管理", "jump":"thinkersystem", "icon":"layui-icon-set", "list":[ { "id":2, "name":"rules", "title":"系统设置", "jump":"/esd_admin/index", "icon":null, "list":[ ] }, { "id":3, "name":"thinkersystem-menu", "title":"Menus管理", "jump":"/esd_admin/menus", "icon":null, "list":[ ] } ] } ]', true);
         return $this->send([
             'menu' => $json
         ]);
@@ -77,7 +77,7 @@ class AdminIndex extends AdminBase
      */
     public function login()
     {
-        $json = json_decode('[{"id":1,"name":"thinkersystem","title":"Admin管理","jump":"thinkersystem","icon":"layui-icon-set","list":[{"id":2,"name":"thinkersystem-rules","title":"Rules管理","jump":"\/thinkersystem\/rules","icon":null,"list":[]},{"id":3,"name":"thinkersystem-menu","title":"Menus管理","jump":"\/thinkersystem\/menus","icon":null,"list":[]},{"id":4,"name":"thinkersystem-role","title":"Roles管理","jump":"\/thinkersystem\/roles","icon":null,"list":[]},{"id":5,"name":"thinkersystem-member","title":"Members管理","jump":"\/thinkersystem\/members","icon":null,"list":[]},{"id":6,"name":"thinkersystem-configs","title":"网站设置","jump":"\/thinkersystem\/configs","icon":"","list":[]}]}]', true);
+        $json = json_decode('[ { "id":1, "name":"thinkersystem", "title":"Admin管理", "jump":"thinkersystem", "icon":"layui-icon-set", "list":[ { "id":2, "name":"rules", "title":"系统设置", "jump":"/esd_admin/index", "icon":null, "list":[ ] }, { "id":3, "name":"thinkersystem-menu", "title":"Menus管理", "jump":"/esd_admin/menus", "icon":null, "list":[ ] } ] } ]', true);
 
         return $this->send([
             'username' => 'admin',
