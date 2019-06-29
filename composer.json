@@ -1,0 +1,28 @@
+{
+  "name": "lphkxd/admin-plugin",
+  "description": "esd/admin-plugin",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "毛自豪",
+      "email": "4213509@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ESD\\Plugins\\": "src/",
+      "ESD\\Plugins\\Admin\\examples\\": "examples/",
+      "ESD\\Plugins\\Admin\\exampleClass\\": "exampleClass/"
+    },
+    "files": [
+      "src/Admin/Helpers/Common.php"
+    ]
+  },
+  "require": {
+    "esd/esd-server": "~0.1"
+  },
+  "require-dev": {
+    "esd/esd-co-server": "~0.1"
+  }
+}
