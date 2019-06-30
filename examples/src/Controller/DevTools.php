@@ -31,7 +31,6 @@ use ESD\Server\Co\Server;
 class DevTools extends DevBase
 {
 
-
     /**
      * @Inject()
      * @var ConfigService
@@ -43,11 +42,10 @@ class DevTools extends DevBase
      * @return string
      * @throws \Exception
      */
-    protected function tools()
+    protected function index()
     {
         return $this->render('index');
     }
-
 
     /**
      * @GetMapping("/systemInfo")
@@ -56,7 +54,6 @@ class DevTools extends DevBase
      */
     public function systemInfo()
     {
-
         return $this->render('systemInfo');
     }
 
