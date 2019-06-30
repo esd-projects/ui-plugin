@@ -26,7 +26,7 @@ class EsdUI
      */
     protected static $script = [
         'file' => [],
-        'use' => [],
+        'use' => ['form'],
         'script' => []
     ];
 
@@ -163,7 +163,7 @@ class EsdUI
     {
         self::$script = [
             'file' => [],
-            'use' => [],
+            'use' => ['form'],
             'script' => []
         ];
         self::$style = [

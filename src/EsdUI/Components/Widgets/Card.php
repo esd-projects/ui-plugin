@@ -42,7 +42,7 @@ class Card extends Layout
     {
         if (!is_null($title)) {
             if ($title instanceof \Closure) {
-                call_user_func_array($title, [$this]);
+                return  call_user_func_array($title, [$this]);
             } else {
                 $this->setTitle($title);
             }

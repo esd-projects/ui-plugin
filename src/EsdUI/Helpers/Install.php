@@ -6,7 +6,6 @@ class Install
     public static function postUpdate()
     {
         $ROOT = __DIR__;
-        // $SRC_ROOT =realpath(__DIR__ . '/../../../src' );
         self::displayMsg('请手动将' . realpath($ROOT . '/../assets') . ' 下的静态文件复制至您的静态文件目录夹内。', 'red');
     }
 

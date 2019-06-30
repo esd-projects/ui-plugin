@@ -114,7 +114,7 @@ class Table extends Layout
         $this->setName($name);
 
         if ($callback instanceof \Closure) {
-            call_user_func_array($callback, [$this]);
+            return call_user_func_array($callback, [$this]);
         }
     }
 

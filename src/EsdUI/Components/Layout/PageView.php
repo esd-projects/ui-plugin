@@ -8,6 +8,8 @@
 
 namespace ESD\Plugins\EsdUI\Components\Layout;
 
+use DI\Annotation\Inject;
+use ESD\Plugins\Blade\Blade;
 use ESD\Plugins\EsdUI\Beans\Layout;
 use ESD\Plugins\EsdUI\Components\Widgets\Breadcrumb;
 use ESD\Plugins\EsdUI\Components\Widgets\Card;
@@ -15,6 +17,12 @@ use ESD\Plugins\EsdUI\EsdUI;
 
 class PageView extends Layout
 {
+
+    /**
+     * @Inject()
+     * @var Blade
+     */
+    public $view;
     /**
      * PageView Title
      * use for <title></title>
@@ -42,7 +50,7 @@ class PageView extends Layout
     public function __construct(\Closure $callback = null)
     {
         if ($callback instanceof \Closure) {
-            call_user_func_array($callback, [$this]);
+            return call_user_func_array($callback, [$this]);
         }
     }
 
@@ -78,7 +86,7 @@ class PageView extends Layout
     {
         if ($rows instanceof \Closure) {
             $rowsView = new Rows();
-            call($rows, [$rowsView]);
+            call_user_func_array($rows, [$rowsView]);
             $this->setLayout($rowsView);
         } else {
             $this->setLayout(new Rows($rows));
@@ -130,69 +138,27 @@ class PageView extends Layout
      */
     public function render($iframe = true)
     {
-        if ($iframe) {
-            $html = '<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>$title</title>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
-    <link rel="stylesheet" href="/thinker-admin/lib/css/fancybox.css" media="all">
-    <link rel="stylesheet" href="/thinker-admin/style/admin.css" media="all">
-    <link rel="stylesheet" href="/thinker-admin/style/antdesign.css" media="all">
-    <style>.layui-layer-content{height: calc(100% - 80px);}html,body{overflow-y: scroll !important;}</style>
-    $styles
+//        if ($this->view ==null){
+//            $this->view = DIGet(Blade::class);
+//        }
+        $html = <<<HTML
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>{$this->title}</title>
 </head>
 <body>
-$breadcrumb
-<div class="layui-fluid">
-    $layouts
-</div>
-<script src="/layui/layui.js"></script>
-<script src="/thinker-admin/lib/extend/fancybox.js"></script>
-$files
-<script>
-    layui.layer = window.layer = parent.layui.layer;
-    layui.config({
-        version: (new Date()).getTime()
-    }).extend({
-        thinkeradmin: "/thinker-admin/thinkeradmin",
-        ices: "../ices.min"
-    }).use(["thinkeradmin", "ices", "index"], function(){
-       $css
-       $use
-    });
-</script>
-</body>
-</html>';
-            foreach (array_merge($this->formatScript(true), [
-                'title' => $this->title,
-                'styles' => $this->formatStyle(),
-                'breadcrumb' => $this->getBreadcrumb(),
-                'layouts' => $this->formatLayouts()
-            ]) as $item => $value) {
-                $html = str_replace('$' . $item, htmlspecialchars_decode($value), $html);
-            }
-
-        } else {
-            $html = (<<<HTML
-<title>{$this->title}</title>
 {$this->formatStyle()}
 {$this->getBreadcrumb()}
 <div class="layui-fluid">
     {$this->formatLayouts()}
 </div>
+</body>
 {$this->formatScript()}
-HTML
-            );
-        }
+</html>
+HTML;
         $this->reset();
         return $html;
     }
-
 
     /**
      * title formatJavascript
@@ -205,7 +171,6 @@ HTML
     {
         $style = EsdUI::getStyle();
         $script = EsdUI::getScript();
-
         $javascript = [];
         if (!empty($script['file'])) {
             foreach ($script['file'] as $i => $v) {
@@ -213,7 +178,6 @@ HTML
             }
         }
         $javascript = join("\r\n", $javascript);
-
         //prevent for load multi css files
         $css = [];
         if (!empty($style['file'])) {
@@ -222,16 +186,15 @@ HTML
             }
         }
         $cssFiles = join("", $css);
-
         $scriptString = join("\r\n", $script['script']);
+        $useFiles = \json_encode(\array_unique($script['use']),JSON_UNESCAPED_UNICODE);
 
-        $useFiles = json_encode($script['use']);
         if ($returnArr) {
             return [
                 'files' => $javascript,
                 'css' => $cssFiles,
                 'use' => <<<HTML
-layui.use({$useFiles}, function(){
+        layui.use({$useFiles}, function(){
         function load(){
             var $ = layui.jquery;
             {$scriptString}
@@ -326,7 +289,6 @@ HTML
     public function setTitle($title)
     {
         $this->title = $title;
-
         return $this;
     }
 

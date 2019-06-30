@@ -50,9 +50,8 @@ class Inline extends Layout
     public function __construct(Form $form, \Closure $callback = null)
     {
         $this->form = $form;
-
         if ($callback instanceof \Closure) {
-            call_user_func_array($callback, [$this]);
+            return call_user_func_array($callback, [$this]);
         }
     }
 

@@ -19,12 +19,15 @@
     ]
   },
   "require": {
-    "esd/esd-server": "~0.1"
+    "esd/esd-server": "~0.1",
+    "ext-json": "*",
+    "ext-yaml": "*"
   },
   "require-dev": {
     "esd/esd-co-server": "~0.1"
   },
   "scripts": {
-    "post-autoload-dump": "ESD\\Plugins\\EsdUI\\Helpers\\Install::postUpdate"
+    "post-package-update": "ESD\\Plugins\\EsdUI\\Helpers\\Install::postUpdate",
+    "post-package-install": "ESD\\Plugins\\EsdUI\\Helpers\\Install::postUpdate"
   }
 }

@@ -1,0 +1,10 @@
+reload:
+  enable: true
+scan:
+  include_paths:
+    - ${ROOT_DIR}/examples/src
+blade:
+  namespace:
+    dev:
+      path: ${ROOT_DIR}/examples/src/Views
+      name: dev

@@ -33,7 +33,7 @@ class Breadcrumb
     {
         if (!is_null($breadcrumb)) {
             if ($breadcrumb instanceof \Closure) {
-                call_user_func_array($breadcrumb, [$this]);
+                return call_user_func_array($breadcrumb, [$this]);
             } else {
                 if (is_array($breadcrumb)) {
                     $this->setBreadcrumb($breadcrumb);

@@ -26,7 +26,7 @@ class Tab extends Inline
         $this->title = $tabName;
 
         if ($callback instanceof \Closure) {
-            call_user_func_array($callback, [$this]);
+           return call_user_func_array($callback, [$this]);
         }
     }
 

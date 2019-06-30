@@ -35,7 +35,7 @@ class Toolbar extends Layout
         $this->table = $table;
 
         if ($callback instanceof \Closure) {
-            call_user_func_array($callback, [$this]);
+            return call_user_func_array($callback, [$this]);
         }
     }
 

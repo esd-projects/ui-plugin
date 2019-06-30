@@ -24,6 +24,8 @@ class Footer extends Layout
      */
     protected $footer = '';
 
+    protected $title = '立即保存';
+
     /**
      * Inline constructor.
      * @param Form $form
@@ -33,7 +35,7 @@ class Footer extends Layout
     {
         $this->form = $form;
         if ($callback instanceof \Closure) {
-            call_user_func_array($callback, [$this]);
+            return  call_user_func_array($callback, [$this]);
         }
     }
 
@@ -111,7 +113,7 @@ HTML;
      */
     public function getFooter()
     {
-        return empty($this->footer) ? '<button class="layui-btn" lay-submit="" lay-filter="' . $this->form->getName() . '-submit">立即提交</button>' : $this->footer;
+        return empty($this->footer) ? '<button class="layui-btn" lay-submit="" lay-filter="' . $this->form->getName() . '-submit">'.$this->getTitle().'</button>' : $this->footer;
     }
 
     /**
@@ -125,6 +127,24 @@ HTML;
     {
         $this->footer = $footer;
 
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $title
+     * @return Footer
+     */
+    public function setTitle(string $title)
+    {
+        $this->title = $title;
         return $this;
     }
 }

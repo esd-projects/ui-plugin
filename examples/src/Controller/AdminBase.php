@@ -8,10 +8,12 @@
 
 namespace ESD\Examples\Controller;
 
+use DI\Annotation\Inject;
 use ESD\Go\Exception\AlertResponseException;
 use ESD\Go\Exception\ResponseException;
 use ESD\Go\GoController;
 use ESD\Plugins\AnnotationsScan\Annotation\Component;
+use ESD\Plugins\Blade\Blade;
 use ESD\Plugins\EasyRoute\RouteException;
 use ESD\Plugins\Security\AccessDeniedException;
 
@@ -21,6 +23,14 @@ use ESD\Plugins\Security\AccessDeniedException;
  */
 class AdminBase extends GoController
 {
+
+    /**
+     * @Inject()
+     * @var Blade
+     */
+    protected $view;
+
+
     public function onExceptionHandle(\Throwable $e)
     {
         if ($this->clientData->getResponse() != null) {
@@ -44,4 +54,8 @@ class AdminBase extends GoController
         return parent::onExceptionHandle($e);
     }
 
+    public function render($tpl, $data = [], $mergeData = [])
+    {
+        return $this->view->render('dev::' . $tpl, $data, $mergeData);
+    }
 }

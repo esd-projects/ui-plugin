@@ -84,7 +84,7 @@ class Form extends Layout
         $this->registerBuiltInAssemblys();
 
         if ($callback instanceof \Closure) {
-            call_user_func_array($callback, [$this]);
+            return  call_user_func_array($callback, [$this]);
         }
     }
 
@@ -170,12 +170,9 @@ class Form extends Layout
     public function footer(\Closure $footer = null)
     {
         if (is_null($this->footer)) {
-
             $this->footer = (new Footer($this, $footer));
-
             $this->assemblys[] = $this->footer;
         }
-
         return $this->footer;
     }
 
@@ -190,7 +187,8 @@ class Form extends Layout
     {
         if ($closure instanceof \Closure) {
             return EsdUI::pageView(function (PageView $pageView) use ($closure) {
-                call_user_func_array($closure, [$pageView, $this->render()]);
+                call_user_func_array($closure,[$pageView,$this]);
+                $pageView->card($this->render());
             })->render();
         } else {
             return EsdUI::pageView(function (PageView $pageView) {
@@ -239,7 +237,6 @@ HTML;
     public function setName($name)
     {
         $this->name = str_replace(["'", '"', ' ', '.', '。', ',', '，', ':', '：', '/', '、'], "_", $name);
-
         return $this;
     }
 
@@ -373,7 +370,6 @@ HTML;
     public function setValue($value)
     {
         $this->value = $value;
-
         return $this;
     }
 }

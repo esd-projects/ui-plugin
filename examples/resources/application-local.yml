@@ -1,5 +1,12 @@
+---
 reload:
-  enable: false
+  enable: 0
 scan:
   include_paths:
-    - /Users/maozihao/Desktop/开发/Admin/examples/src
+    - ${ROOT_DIR}/examples/src
+blade:
+  namespace:
+    dev:
+      path: ${ROOT_DIR}/examples/src/Views
+      name: dev
+...
