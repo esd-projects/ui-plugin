@@ -1,32 +1,5 @@
 <div class="layui-card layui-bg-gray">
     <div class="layui-card-body layui-anim layui-anim-upbit">
-        <style>    .store-total-container {
-                font-size: 14px;
-                margin-bottom: 20px;
-                letter-spacing: 1px;
-            }
-
-            .store-total-container .store-total-icon {
-                top: 45%;
-                right: 8%;
-                font-size: 65px;
-                position: absolute;
-                color: rgba(255, 255, 255, 0.4);
-            }
-
-            .store-total-container .store-total-item {
-                color: #fff;
-                line-height: 4em;
-                padding: 15px 25px;
-                position: relative;
-            }
-
-            .store-total-container .store-total-item > div:nth-child(2) {
-                font-size: 46px;
-                line-height: 46px;
-            }
-
-        </style>
         <div class="think-box-shadow store-total-container notselect">
             <div class="margin-bottom-15">系统统计</div>
             <div class="layui-row layui-col-space15">

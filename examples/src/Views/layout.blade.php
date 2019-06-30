@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     @section('style')
         <link rel="stylesheet" href="layui/css/layui.css?t=20181101-1" media="all">
-        <link rel="stylesheet" href="dist/style/common.css?t=20181101-1" media="all">
+        <link rel="stylesheet" href="dist/style/common.css?t=20181101-1{{time()}}" media="all">
     @show
     @stack('style')
 </head>

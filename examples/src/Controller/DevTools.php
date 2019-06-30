@@ -9,15 +9,19 @@
 namespace ESD\Examples\Controller;
 
 use DI\Annotation\Inject;
+use ESD\Core\Memory\CrossProcess\Table as MemoryTable;
 use ESD\Examples\Model\Menu;
 use ESD\Examples\Service\ConfigService;
 use ESD\Plugins\EasyRoute\Annotation\GetMapping;
+use ESD\Plugins\EasyRoute\Annotation\RequestParam;
 use ESD\Plugins\EasyRoute\Annotation\RestController;
 use ESD\Plugins\EsdUI\Components\Form\Form;
 use ESD\Plugins\EsdUI\Components\Form\Tab;
 use ESD\Plugins\EsdUI\Components\Layout\PageView;
+use ESD\Plugins\EsdUI\Components\Table\Table;
 use ESD\Plugins\EsdUI\EsdUI;
 use ESD\Plugins\Validate\ValidationException;
+use ESD\Server\Co\Server;
 
 /**
  * @RestController("/devTools")
@@ -52,7 +56,56 @@ class DevTools extends DevBase
      */
     public function systemInfo()
     {
+
         return $this->render('systemInfo');
+    }
+
+    /**
+     * @GetMapping("/systemCount")
+     * @return string
+     * @throws \Exception
+     */
+    public function systemCount()
+    {
+
+        $page =$this->request->getQueryParams()['page']??0;
+        if ($page > 0) {
+            /**
+             * @var $table MemoryTable
+             */
+            $table = DIGet('RouteCountTable');
+            $output = [];
+            foreach ($table as $path => $num) {
+                $num['url'] = $path;
+                $output[]= $num;
+            }
+          return ajax($output);
+        }
+        $output =[];
+        $serverStats = Server::$instance->stats();
+        $output['server'] = 'esd-server';
+        $output['Start'] = date('Y-m-d H:i:s', $serverStats->getStartTime());
+        $output['Accept'] = $serverStats->getAcceptCount();
+        $output['Close'] = $serverStats->getCloseCount();
+        $output['Request'] = $serverStats->getRequestCount();
+        $output['Coroutine'] = $serverStats->getCoroutineNum();
+        $output['Connection'] = $serverStats->getConnectionNum();
+        $output['Tasking'] = $serverStats->getTaskingNum();
+        $output['TaskQueue'] = $serverStats->getTaskQueueBytes();
+        $output['WorkerDispatchCount'] = $serverStats->getWorkerDispatchCount();
+        $output['WorkerRequestCount'] = $serverStats->getWorkerRequestCount();
+        return $this->render('systemCount',$output);
+//
+//                return EsdUI::table("systemCount", function (Table $table) {
+//                    $table->setRestfulUrl("/devTools/systemCount");
+//                    $table->columns('url', "URL");
+//                    $table->columns('num_60', "30分钟请求");
+//                    $table->columns('num_3600', "一小时请求");
+//                    $table->columns('num_86400', "一天请求");
+//                    $table->setLimit(100000)->setLimits([100000]);
+//                })->show(function(PageView $pageView){
+//                    $pageView->setTitle('请求统计');
+//                });
     }
 
     /**
@@ -96,9 +149,10 @@ class DevTools extends DevBase
     public function menu()
     {
         // 生成测试数据
-        $menus[] = ( new Menu())->setId(1)->setName('menu')->setTitle('系统工具')->setIcon( 'layui-icon-set')->setJump("")->setPid(0)->toArray();
-        $menus[] = ( new Menu())->setId(2)->setName('systemInfo')->setTitle('系统信息')->setJump("/devTools/systemInfo")->setPid(1)->toArray();
-        $menus[] = ( new Menu())->setId(3)->setName('systemConfig')->setTitle('配置管理')->setJump('/devTools/systemConfig')->setPid(1)->toArray();
+        $menus[] = (new Menu())->setId(1)->setName('menu')->setTitle('系统工具')->setIcon('layui-icon-set')->setJump("")->setPid(0)->toArray();
+        $menus[] = (new Menu())->setId(2)->setName('systemInfo')->setTitle('系统信息')->setJump("/devTools/systemInfo")->setPid(1)->toArray();
+        $menus[] = (new Menu())->setId(3)->setName('systemConfig')->setTitle('配置管理')->setJump('/devTools/systemConfig')->setPid(1)->toArray();
+        $menus[] = (new Menu())->setId(4)->setName('systemCount')->setTitle('请求统计')->setJump('/devTools/systemCount')->setPid(1)->toArray();
         $list = EsdUI::tools()->tree($menus);
         return ajax($list);
     }

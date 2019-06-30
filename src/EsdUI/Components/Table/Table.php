@@ -249,11 +249,12 @@ class Table extends Layout
     public function show(\Closure $closure = null)
     {
         if ($closure instanceof \Closure) {
-            return Admin::pageView(function (PageView $pageView) use ($closure) {
-                call($closure, [$pageView, $this->render(), $this->getSearch()]);
+            return EsdUI::pageView(function (PageView $pageView) use ($closure) {
+                call_user_func_array($closure, [$pageView, $this->render(), $this->getSearch()]);
+                $pageView->card($this->render(), $this->getSearch());
             })->render();
         } else {
-            return Admin::pageView(function (PageView $pageView) {
+            return EsdUI::pageView(function (PageView $pageView) {
                 $pageView->card($this->render(), $this->getSearch());
             })->render();
         }
@@ -281,13 +282,12 @@ class Table extends Layout
             $columnsTool[] = $v->getTool();
         }
         //table's config cols
-        $columns = json_encode($columns);
+        $columns = json_encode($columns,JSON_UNESCAPED_UNICODE);
         //use tools html string
         $columnsTool = join("", $columnsTool);
 
         //get tool's event
         $toolEvent = empty($this->tool) ? '' : $this->tool->render();
-
         //get table's toolbar
         if (empty($this->toolbar)) {
             $toolbar = '';
@@ -295,9 +295,7 @@ class Table extends Layout
             $toolbar = $this->toolbar->render();
             $this->setToolbar("#" . $this->getName() . "_toolbar");
         }
-
         EsdUI::script('table', 2);
-
         EsdUI::script(<<<HTML
 var _searchField = {};
 layui.form.on('submit({$this->getName()}_form_search)', function (data) {
