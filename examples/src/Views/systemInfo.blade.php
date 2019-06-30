@@ -113,6 +113,10 @@
                             <td>未知</td>
                         </tr>
                         <tr>
+                            <td>Swoole版本</td>
+                            <td>{{ swoole_version()  }}</td>
+                        </tr>
+                        <tr>
                             <td>运行PHP版本</td>
                             <td>{{PHP_VERSION }}</td>
                         </tr>
