@@ -9,6 +9,7 @@
 namespace ESD\Examples\Controller;
 
 use DI\Annotation\Inject;
+use ESD\Examples\Model\Menu;
 use ESD\Examples\Service\ConfigService;
 use ESD\Plugins\EasyRoute\Annotation\GetMapping;
 use ESD\Plugins\EasyRoute\Annotation\RestController;
@@ -16,13 +17,14 @@ use ESD\Plugins\EsdUI\Components\Form\Form;
 use ESD\Plugins\EsdUI\Components\Form\Tab;
 use ESD\Plugins\EsdUI\Components\Layout\PageView;
 use ESD\Plugins\EsdUI\EsdUI;
+use ESD\Plugins\Validate\ValidationException;
 
 /**
  * @RestController("/devTools")
  * Class Index
  * @package ESD\Plugins\EasyRoute
  */
-class AdminIndex extends AdminBase
+class DevTools extends DevBase
 {
 
 
@@ -89,36 +91,14 @@ class AdminIndex extends AdminBase
     /**
      * @GetMapping("/menu")
      * @return string
+     * @throws ValidationException
      */
     public function menu()
     {
-        $menu = [];
-        $menu['id'] = 1;
-        $menu['name'] = 'menu';
-        $menu['title'] = '系统工具';
-        $menu['jump'] = 'thinkersystem';
-        $menu['icon'] = 'layui-icon-set';
-        $menu['jump'] = 'thinkersystem';
-        $menu['pid'] = 0;
-        $menus[] = $menu;
-        $menu = [];
-        $menu['id'] = 2;
-        $menu['name'] = 'systemInfo';
-        $menu['title'] = '系统信息';
-        $menu['jump'] = 'systemInfo';
-        $menu['icon'] = 'layui-icon-info';
-        $menu['jump'] = '/devTools/systemInfo';
-        $menu['pid'] = 1;
-        $menus[] = $menu;
-        $menu = [];
-        $menu['id'] = 3;
-        $menu['name'] = 'systemInfo';
-        $menu['title'] = '配置管理';
-        $menu['jump'] = 'systemInfo';
-        $menu['icon'] = 'layui-icon-info';
-        $menu['jump'] = '/devTools/systemConfig';
-        $menu['pid'] = 1;
-        $menus[] = $menu;
+        // 生成测试数据
+        $menus[] = ( new Menu())->setId(1)->setName('menu')->setTitle('系统工具')->setIcon( 'layui-icon-set')->setJump("")->setPid(0)->toArray();
+        $menus[] = ( new Menu())->setId(2)->setName('systemInfo')->setTitle('系统信息')->setJump("/devTools/systemInfo")->setPid(1)->toArray();
+        $menus[] = ( new Menu())->setId(3)->setName('systemConfig')->setTitle('配置管理')->setJump('/devTools/systemConfig')->setPid(1)->toArray();
         $list = EsdUI::tools()->tree($menus);
         return ajax($list);
     }

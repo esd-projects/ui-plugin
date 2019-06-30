@@ -21,7 +21,7 @@ use ESD\Plugins\Security\AccessDeniedException;
  * @Component()
  * @package ESD\Plugins\EsdUI\examples\Controller
  */
-class AdminBase extends GoController
+class DevBase extends GoController
 {
 
     /**

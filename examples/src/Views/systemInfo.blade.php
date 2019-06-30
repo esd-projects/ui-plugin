@@ -150,41 +150,29 @@
                         <tbody>
                         <tr>
                             <td>产品名称</td>
-                            <td>framework</td>
+                            <td>Esd DevTools</td>
                         </tr>
                         <tr>
                             <td>在线体验</td>
-                            <td><a target="_blank" href="http://framework.thinkadmin.top">http://framework.thinkadmin.top</a>
+                            <td>
+                                暂无
                             </td>
                         </tr>
                         <tr>
                             <td>官方QQ群</td>
                             <td>
-                                <a href="http://shang.qq.com/wpa/qunwpa?idkey=ae25cf789dafbef62e50a980ffc31242f150bc61a61164458216dd98c411832a"><img
-                                            src="//pub.idqqimg.com/wpa/images/group.png" style="height:18px;width:auto"
-                                            target="_blank"></a></td>
+                                群号:994811283
+                            </td>
                         </tr>
                         <tr>
                             <td>项目地址</td>
-                            <td><a target="_blank" href="https://github.com/zoujingli/framework">https://github.com/zoujingli/framework</a>
+                            <td><a target="_blank" href="https://github.com/esd-projects">https://github.com/esd-projects</a>
                             </td>
                         </tr>
                         <tr>
                             <td>BUG反馈</td>
-                            <td><a target="_blank" href="https://github.com/zoujingli/framework/issues">https://github.com/zoujingli/framework/issues</a>
+                            <td><a target="_blank" href="https://github.com/esd-projects/ui-plugin/issues">https://github.com/esd-projects/ui-plugin/issues</a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>开发团队</td>
-                            <td><a href="http://www.cuci.cc" target="_blank">广州楚才信息科技有限公司</a></td>
-                        </tr>
-                        <tr>
-                            <td>团队官网</td>
-                            <td><a target="_blank" href="http://www.cuci.cc">http://www.cuci.cc</a></td>
-                        </tr>
-                        <tr>
-                            <td>办公地址</td>
-                            <td>广州市天河区东圃一横路东泷商贸中心G02</td>
                         </tr>
                         </tbody>
                     </table>
