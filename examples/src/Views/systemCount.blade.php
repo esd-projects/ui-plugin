@@ -63,9 +63,7 @@
     </div>
 </div>
 </body>
-
 <script>
-
     layui.use(["form", "table"], function () {
         function load() {
             var $ = layui.jquery;
@@ -80,7 +78,6 @@
 
             ));
         }
-
         if (!layui.common) {
             layui.use('common', load);
         } else {

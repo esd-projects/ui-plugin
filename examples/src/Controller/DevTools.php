@@ -64,7 +64,6 @@ class DevTools extends DevBase
      */
     public function systemCount()
     {
-
         $page =$this->request->getQueryParams()['page']??0;
         if ($page > 0) {
             /**
@@ -104,7 +103,6 @@ class DevTools extends DevBase
 //                    $pageView->setTitle('请求统计');
 //                });
     }
-
     /**
      * @GetMapping("/systemConfig")
      * @return string
