@@ -8,32 +8,24 @@ layui.define(['jquery', 'layer', 'laytpl'], function (exports) {
         v: "1.0.0",
 
         //登录界面的名称和进入后台后左上角名称
-        name: "ThinkerAdmin",
+        name: "ESD开发工具",
 
         //登录界面第二行显示
-        span: "ThinkerAdmin Login",
-
+        span: "ESD开发工具",
         //是否开启多页版本
         isIframe: true,
-
         //是否在调试状态
         debug: true,
-
         //本地储存的表
         tableName: "thinkerAdmin",
-
         //有事件触发的时候，显示的名称
         eventName: "thinkerAdmin",
-
         //携带的token名
         tokenName: 'access_token',
-
         //判断是否需要登录
-        tokenNeed: true,
-
+        tokenNeed: false,
         //登录界面地址, 仅仅为后端显示地址
-        login: "/login",
-
+        login: "login",
         //ajax参数配置
         ajax: {
             resultCodeName: "code",
@@ -58,7 +50,7 @@ layui.define(['jquery', 'layer', 'laytpl'], function (exports) {
 
         //视图模板的配置
         view: {
-            home: "/esd_admin/index",
+            home: "/devTools/systemInfo",
             index: "index",
             path: "./iframe/",
             suffix: ".html",
@@ -68,9 +60,9 @@ layui.define(['jquery', 'layer', 'laytpl'], function (exports) {
                 error: "../error"
             },
             //样式界面
-            theme: "../../thinkeradmin/theme",
+            theme: "/devTools/theme",
             //登录界面
-            login: "../login",
+            login: "login",
         },
 
         //菜单界面
@@ -87,10 +79,10 @@ layui.define(['jquery', 'layer', 'laytpl'], function (exports) {
          * 配置参数
          */
         config: {
-            editpwd: "/esd_admin/editpwd",
-            captcha: "/captcha.html",
-            login: "/esd_admin/login",
-            dyconfig: "/esd_admin/config"
+            editpwd: "/devTools/editpwd",
+            captcha: "/devTools/captcha",
+            login: "/devTools/login",
+            dyconfig: "/devTools/config"
         },
 
         /**
@@ -157,6 +149,5 @@ layui.define(['jquery', 'layer', 'laytpl'], function (exports) {
     layui.config({
         base: thinkerAdmin.isIframe ? "/thinker-admin/iframe/" : "./thinker-admin/spa/"
     });
-
     exports("thinkeradmin", thinkerAdmin);
 });

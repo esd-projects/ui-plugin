@@ -1,17 +1,5 @@
 reload:
   enable: false
-
-aop:
-  include_paths:
-    - ${ROOT_DIR}/examples/src
-
 scan:
   include_paths:
-    - /Users/maozihao/Desktop/开发/ESD-Wechat/examples/src
-
-redis:
-  default:
-    host: '10.0.0.23'
-#钉钉报警
-ding:
-  token: ba50a59584022ca8af3628979e9b544c241fa58f0a3708158ea28533618f228e
+    - /Users/maozihao/Desktop/开发/Admin/examples/src

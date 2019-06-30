@@ -30,15 +30,9 @@
             <li class="layui-nav-item" lay-unselect>
                 <script lay-done="layui.element.render('nav', 'thinkeradmin-layout-right');" template type="text/html">
                     <a href="javascript:;">
-                        <cite>{{ layui.session.get("userinfo").username || '暂无名称'}}</cite>
+                        <cite>暂无名称</cite>
                     </a>
                     <dl class="layui-nav-child">
-                        {{# if(layui.thinkeradmin.config.editpwd){ }}
-                        <dd>
-                            <a thinker-href="{{ layui.thinkeradmin.config.editpwd }}">修改密码</a>
-                        </dd>
-                        <hr>
-                        {{# } }}
                         <dd thinkeradmin-event="logout" style="text-align: center;"><a>退出</a></dd>
                     </dl>
                 </script>
