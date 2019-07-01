@@ -7,10 +7,7 @@
  **/
 
 namespace ESD\Plugins\EsdUI;
-
-
 use ESD\Core\Plugins\Config\BaseConfig;
-
 class EsdUIConfig extends BaseConfig
 {
     const key = "ui";
