@@ -10,7 +10,6 @@ namespace ESD\Plugins\EsdUI\Components\Table;
 
 use ESD\Plugins\EsdUI\Beans\Layout;
 use ESD\Plugins\EsdUI\Components\Form\Form;
-use ESD\Plugins\EsdUI\Components\Layout\Card;
 use ESD\Plugins\EsdUI\Components\Layout\PageView;
 use ESD\Plugins\EsdUI\Components\Table\Events\On;
 use ESD\Plugins\EsdUI\Components\Table\Events\Tool;
@@ -250,7 +249,7 @@ class Table extends Layout
     {
         if ($closure instanceof \Closure) {
             return EsdUI::pageView(function (PageView $pageView) use ($closure) {
-                call_user_func_array($closure, [$pageView, $this->render(), $this->getSearch()]);
+                call_user_func_array($closure, [$pageView, $this]);
                 $pageView->card($this->render(), $this->getSearch());
             })->render();
         } else {
