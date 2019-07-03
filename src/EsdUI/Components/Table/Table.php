@@ -32,7 +32,9 @@ use ESD\Plugins\EsdUI\EsdUI;
  * @method Table setTitle($title);
  * @method Table setText($text);
  * @method Table setAutoSort($isSort = true);
- *
+ * @method Table setSize($skin = 'lg');  sm （小尺寸）lg （大尺寸）	用于设定表格尺寸，若使用默认尺寸不设置该属性即可
+ * @method Table setSkin($skin = 'line');  line （行边框风格）row （列边框风格） nob （无边框风格）
+ * @method Table setEven($isEven = false); 若不开启隔行背景，不设置该参数即可
  * @method Table getUrl();
  * @method Table getToolbar();
  * @method Table getWidth();
