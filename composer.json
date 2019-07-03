@@ -20,8 +20,7 @@
   },
   "require": {
     "esd/esd-server": "~0.1",
-    "ext-json": "*",
-    "ext-yaml": "*"
+    "ext-json": "*"
   },
   "require-dev": {
     "esd/esd-co-server": "~0.1"

@@ -22,13 +22,13 @@
         <div class="layui-card-header">输入框</div>
         <div class="layui-card-body layui-row layui-col-space10">
           <div class="layui-col-md12">
-            <input autocomplete="off" class="layui-input" name="title" placeholder="请输入标题" type="text">
+            <input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input">
           </div>
           <div class="layui-col-md6">
-            <input autocomplete="off" class="layui-input" name="title" placeholder="用户名" type="text">
+            <input type="text" name="title" placeholder="用户名" autocomplete="off" class="layui-input">
           </div>
           <div class="layui-col-md6">
-            <input autocomplete="off" class="layui-input" name="title" placeholder="密码" type="password">
+            <input type="password" name="title" placeholder="密码" autocomplete="off" class="layui-input">
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
         <div class="layui-card-header">下拉选择框</div>
         <div class="layui-card-body layui-row layui-col-space10">
           <div class="layui-col-md6">
-            <select lay-verify="" name="city">
+            <select name="city" lay-verify="">
               <option value="">请选择一个城市</option>
               <option value="010">北京</option>
               <option value="021">上海</option>
@@ -44,10 +44,10 @@
             </select>
           </div>
           <div class="layui-col-md6">
-            <select lay-verify="" name="city">
+            <select name="city" lay-verify="">
               <option value="010">北京</option>
-              <option disabled value="021">上海（禁用效果）</option>
-              <option selected value="0571">杭州</option>
+              <option value="021" disabled>上海（禁用效果）</option>
+              <option value="0571" selected>杭州</option>
             </select> 
           </div>
           <div class="layui-col-md6">
@@ -63,7 +63,7 @@
             </select>
           </div>
           <div class="layui-col-md6">
-            <select lay-search lay-verify="required" name="city">
+            <select name="city" lay-verify="required" lay-search>
               <option value="">带搜索的选择框</option>
               <option value="1">layer</option>
               <option value="2">form</option>
@@ -88,7 +88,7 @@
             </select>
           </div>
           <div class="layui-col-md12">
-            <select lay-verify="" name="city">
+            <select name="city" lay-verify="">
               <option value="">请选择一个城市</option>
               <option value="010">北京</option>
               <option value="021">上海</option>
@@ -101,15 +101,15 @@
         <div class="layui-card-header">复选框</div>
         <div class="layui-card-body layui-row layui-col-space10">
           <div class="layui-col-md12">
-            <input checked name="" title="写作" type="checkbox">
-            <input name="" title="发呆" type="checkbox">
-            <input disabled name="" title="禁用" type="checkbox">
+            <input type="checkbox" name="" title="写作" checked>
+            <input type="checkbox" name="" title="发呆"> 
+            <input type="checkbox" name="" title="禁用" disabled> 
           </div>
           <div class="layui-col-md12">
-            <input checked lay-skin="primary" name="" title="写作" type="checkbox">
-            <input lay-skin="primary" name="" title="发呆" type="checkbox">
-            <input disabled lay-skin="primary" name="" title="禁用" type="checkbox">
-            <input lay-skin="primary" name="" type="checkbox">
+            <input type="checkbox" name="" title="写作" lay-skin="primary" checked>
+            <input type="checkbox" name="" title="发呆" lay-skin="primary"> 
+            <input type="checkbox" name="" title="禁用" lay-skin="primary" disabled> 
+            <input type="checkbox" name="" lay-skin="primary"> 
           </div>
         </div>
       </div>
@@ -117,10 +117,10 @@
         <div class="layui-card-header">开关</div>
         <div class="layui-card-body layui-row layui-col-space10">
           <div class="layui-col-md12">
-            <input lay-skin="switch" name="xxx" type="checkbox">
-            <input checked lay-skin="switch" lay-text="ON|OFF" name="yyy" type="checkbox">
-            <input lay-skin="switch" lay-text="开启|关闭" name="zzz" type="checkbox">
-            <input disabled lay-skin="switch" name="aaa" type="checkbox">
+            <input type="checkbox" name="xxx" lay-skin="switch">
+            <input type="checkbox" name="yyy" lay-skin="switch" lay-text="ON|OFF" checked>
+            <input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭">
+            <input type="checkbox" name="aaa" lay-skin="switch" disabled>
           </div>
         </div>
       </div>
@@ -128,9 +128,9 @@
         <div class="layui-card-header">单选框</div>
         <div class="layui-card-body layui-row layui-col-space10">
           <div class="layui-col-md12">
-            <input name="sex" title="男" type="radio" value="nan">
-            <input checked name="sex" title="女" type="radio" value="nv">
-            <input disabled name="sex" title="中性" type="radio" value="">
+            <input type="radio" name="sex" value="nan" title="男">
+            <input type="radio" name="sex" value="nv" title="女" checked>
+            <input type="radio" name="sex" value="" title="中性" disabled>
           </div>
         </div>
       </div>
@@ -140,25 +140,25 @@
         <div class="layui-card-header">文本域</div>
         <div class="layui-card-body layui-row layui-col-space10">
           <div class="layui-col-md12">
-            <textarea class="layui-textarea" name="" placeholder="请输入"></textarea>
+            <textarea name="" placeholder="请输入" class="layui-textarea"></textarea>
           </div>
         </div>
       </div>
       <div class="layui-card">
         <div class="layui-card-header">响应式组合</div>
         <div class="layui-card-body">
-          <form action="" class="layui-form" lay-filter="component-form-element">
+          <form class="layui-form" action="" lay-filter="component-form-element">
             <div class="layui-row layui-col-space10 layui-form-item">
               <div class="layui-col-lg6">
                 <label class="layui-form-label">员工姓名：</label>
                 <div class="layui-input-block">
-                  <input autocomplete="off" class="layui-input" lay-verify="required" name="fullname" placeholder="" type="text">
+                  <input type="text" name="fullname" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
                 </div>
               </div>
               <div class="layui-col-lg6">
                 <label class="layui-form-label">技术工种：</label>
                 <div class="layui-input-block">
-                  <select lay-filter="aihao" lay-verify="required" name="type">
+                  <select name="type" lay-verify="required" lay-filter="aihao">
                     <option value=""></option>
                     <option value="0">前端工程师</option>
                     <option value="1">Node.js工程师</option>
@@ -173,43 +173,43 @@
             <div class="layui-form-item">
               <label class="layui-form-label">兴趣爱好：</label>
               <div class="layui-input-block">
-                <input name="interest[write]" title="写作" type="checkbox">
-                <input name="interest[read]" title="阅读" type="checkbox">
-                <input checked name="interest[code]" title="代码" type="checkbox">
-                <input name="interest[dreaming]" title="做梦" type="checkbox">
+                <input type="checkbox" name="interest[write]" title="写作">
+                <input type="checkbox" name="interest[read]" title="阅读">
+                <input type="checkbox" name="interest[code]" title="代码" checked>
+                <input type="checkbox" name="interest[dreaming]" title="做梦">
               </div>
             </div>
             <div class="layui-form-item">
               <label class="layui-form-label">是否婚姻：</label>
               <div class="layui-input-block">
-                <input lay-skin="switch" lay-text="是|否" name="marriage" type="checkbox">
+                <input type="checkbox" name="marriage" lay-skin="switch" lay-text="是|否">
               </div>
             </div>
             <div class="layui-form-item">
               <label class="layui-form-label">所属职称：</label>
               <div class="layui-input-block">
-                <input name="role" title="经理" type="radio" value="">
-                <input name="role" title="主管" type="radio" value="">
-                <input checked name="role" title="码农" type="radio" value="">
-                <input name="role" title="端水" type="radio" value="">
+                <input type="radio" name="role" value="" title="经理">
+                <input type="radio" name="role" value="" title="主管">
+                <input type="radio" name="role" value="" title="码农" checked>
+                <input type="radio" name="role" value="" title="端水">
               </div>
             </div>
             <div class="layui-form-item">
               <label class="layui-form-label">其它信息：</label>
               <div class="layui-input-block">
-                <textarea class="layui-textarea" name="other" placeholder=""></textarea>
+                <textarea name="other" placeholder="" class="layui-textarea"></textarea>
               </div>
             </div>
             <div class="layui-form-item">
               <label class="layui-form-label"> </label>
               <div class="layui-input-block">
-                <input checked lay-skin="primary" name="" title="同意" type="checkbox">
+                <input type="checkbox" name="" title="同意" lay-skin="primary" checked>
               </div>
             </div>
             <div class="layui-form-item">
               <div class="layui-input-block">
-                <button class="layui-btn" lay-filter="component-form-element" lay-submit>立即提交</button>
-                <button class="layui-btn layui-btn-primary" type="reset">重置</button>
+                <button class="layui-btn" lay-submit lay-filter="component-form-element">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
               </div>
             </div>
           </form>

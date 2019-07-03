@@ -19,10 +19,10 @@
           <div class="layui-card-body">
             <table class="layui-hide" id="test-table-style"></table>
             
-            <script id="test-table-usernameTpl" type="text/html">
+            <script type="text/html" id="test-table-usernameTpl">
               <a href="/?table-demo-id={{d.id}}" class="layui-table-link" target="_blank">{{ d.username }}</a>
             </script>
-            <script id="test-table-sexTpl" type="text/html">
+            <script type="text/html" id="test-table-sexTpl">
               {{#  if(d.sex === '女'){ }}
                 <span style="color: #F581B1;">{{ d.sex }}</span>
               {{#  } else { }}

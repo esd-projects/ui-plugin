@@ -24,6 +24,14 @@ class Text extends Assembly
      * @var string
      */
     protected $placeholder = '';
+    /**
+     * @var string
+     */
+    protected $html = '';
+    /**
+     * @var string
+     */
+    protected $tips = '';
 
     /**
      * @var array
@@ -48,6 +56,7 @@ HTML
         );
         return $this;
     }
+
     /**
      * title render
      * description render html
@@ -60,6 +69,8 @@ HTML
 <label class="layui-form-label">{$this->getLabel()}</label>
 <div class="{$this->getClass()}">
     <input type="{$this->inputType}" class="{$this->getInputClass()}" name="{$this->getName()}" id="{$this->getId()}" lay-filter="{$this->getId()}" value="{$this->getValue()}" placeholder="{$this->placeholder}" {$this->getAttributes()} />
+        {$this->getTips()}
+    {$this->getHtml()}
 </div>
 HTML;
     }
@@ -98,5 +109,42 @@ HTML;
         $this->placeholder = $placeholder;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTips(): string
+    {
+        if (!empty($this->tips)) {
+            return "<p class=\"help-block\">{$this->tips}";
+        }
+        return '';
+    }
+
+    /**
+     * @param string $tips
+     * @return Text
+     */
+    public function setTips(string $tips)
+    {
+        $this->tips = $tips;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHtml(): string
+    {
+        return $this->html;
+    }
+
+    /**
+     * @param string $customize
+     */
+    public function setHtml(string $html): void
+    {
+        $this->html = $html;
     }
 }

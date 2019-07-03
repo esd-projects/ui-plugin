@@ -17,23 +17,23 @@
         <div class="layui-inline">
           <label class="layui-form-label">ID</label>
           <div class="layui-input-inline">
-            <input autocomplete="off" class="layui-input" name="cid" placeholder="请输入" type="text">
+            <input type="text" name="cid" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">评论者</label>
           <div class="layui-input-inline">
-            <input autocomplete="off" class="layui-input" name="username" placeholder="请输入" type="text">
+            <input type="text" name="username" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">评论内容</label>
           <div class="layui-input-inline">
-            <input autocomplete="off" class="layui-input" name="content" placeholder="请输入" type="text">
+            <input type="text" name="content" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
-          <button class="layui-btn layuiadmin-btn-comm" data-type="reload" lay-filter="LAY-app-contcomm-search" lay-submit>
+          <button class="layui-btn layuiadmin-btn-comm" data-type="reload" lay-submit lay-filter="LAY-app-contcomm-search">
             <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
           </button>
         </div>
@@ -44,7 +44,7 @@
         <button class="layui-btn layuiadmin-btn-comm" data-type="batchdel">删除</button>
       </div>
       <table id="LAY-app-content-comm" lay-filter="LAY-app-content-comm"></table>  
-      <script id="table-content-com" type="text/html">
+      <script type="text/html" id="table-content-com">
         <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
       </script>

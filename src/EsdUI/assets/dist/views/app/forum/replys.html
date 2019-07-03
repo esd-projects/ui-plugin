@@ -17,17 +17,17 @@
         <div class="layui-inline layuiadmin-input-useradmin">
           <label class="layui-form-label">回帖人</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="replyer" placeholder="请输入" type="text">
+            <input type="text" name="replyer" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">回帖内容</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="content" placeholder="请输入" type="text">
+            <input type="text" name="content" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
-          <button class="layui-btn layuiadmin-btn-replys" data-type="reload" lay-filter="LAY-app-forumreply-search" lay-submit>
+          <button class="layui-btn layuiadmin-btn-replys" data-type="reload" lay-submit lay-filter="LAY-app-forumreply-search">
             <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
           </button>
         </div>
@@ -38,10 +38,10 @@
         <button class="layui-btn layuiadmin-btn-replys" data-type="batchdel">删除</button>
       </div>
       <table id="LAY-app-forumreply-list" lay-filter="LAY-app-forumreply-list"></table> 
-      <script id="imgTpl" type="text/html">
+      <script type="text/html" id="imgTpl">
         <img style="display: inline-block; width: 50%; height: 100%;" src= {{ d.avatar }}>
       </script>  
-      <script id="table-forum-replys" type="text/html">
+      <script type="text/html" id="table-forum-replys">
         <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
       </script>

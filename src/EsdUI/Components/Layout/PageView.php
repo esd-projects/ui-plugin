@@ -50,7 +50,7 @@ class PageView extends Layout
     public function __construct(\Closure $callback = null)
     {
         if ($callback instanceof \Closure) {
-            return call_user_func_array($callback, [$this]);
+             call_user_func_array($callback, [$this]);
         }
     }
 

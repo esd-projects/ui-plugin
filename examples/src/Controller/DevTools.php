@@ -64,8 +64,8 @@ class DevTools extends DevBase
      */
     public function systemCount()
     {
-        $page =$this->request->getQueryParams()['page']??0;
-        if ($page > 0) {
+        //ajax  返回服务器统计信息
+        if ($this->isAjax()) {
             /**
              * @var $table MemoryTable
              */
@@ -73,11 +73,11 @@ class DevTools extends DevBase
             $output = [];
             foreach ($table as $path => $num) {
                 $num['url'] = $path;
-                $output[]= $num;
+                $output[] = $num;
             }
-          return ajax($output);
+            return ajax($output);
         }
-        $output =[];
+        $output = [];
         $serverStats = Server::$instance->stats();
         $output['server'] = 'esd-server';
         $output['Start'] = date('Y-m-d H:i:s', $serverStats->getStartTime());
@@ -90,19 +90,27 @@ class DevTools extends DevBase
         $output['TaskQueue'] = $serverStats->getTaskQueueBytes();
         $output['WorkerDispatchCount'] = $serverStats->getWorkerDispatchCount();
         $output['WorkerRequestCount'] = $serverStats->getWorkerRequestCount();
-        return $this->render('systemCount',$output);
-//
-//                return EsdUI::table("systemCount", function (Table $table) {
-//                    $table->setRestfulUrl("/devTools/systemCount");
-//                    $table->columns('url', "URL");
-//                    $table->columns('num_60', "30分钟请求");
-//                    $table->columns('num_3600', "一小时请求");
-//                    $table->columns('num_86400', "一天请求");
-//                    $table->setLimit(100000)->setLimits([100000]);
-//                })->show(function(PageView $pageView){
-//                    $pageView->setTitle('请求统计');
-//                });
+        //获取HTML渲染结果
+        $card = $this->render('systemCount', $output);
+        return EsdUI::table("systemCount", function (Table $table) {
+            $table->setName('统计详情');
+            $table->setRestfulUrl("/devTools/systemCount");
+            $table->columns('url', "URL");
+            $table->columns('num_60', "60秒内请求");
+            $table->columns('num_3600', "一小时请求");
+            $table->columns('num_86400', "一天请求");
+            $table->setPage(false);
+            $table->setSkin('row');
+            $table->setEven(true);
+            $table->setToolbar(false);
+        })->show(function (PageView $pageView) use ($card, $output) {
+            $pageView->setTitle('请求统计');
+            //传入HTML
+            $pageView->card($card, '请求统计 服务器启动时间' . $output['Start']);
+        });
     }
+
+
     /**
      * @GetMapping("/systemConfig")
      * @return string

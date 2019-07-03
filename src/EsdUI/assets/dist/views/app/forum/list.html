@@ -16,19 +16,19 @@
         <div class="layui-inline">
           <label class="layui-form-label">ID</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="id" placeholder="请输入" type="text">
+            <input type="text" name="id" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">发帖人</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="poster" placeholder="请输入" type="text">
+            <input type="text" name="poster" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">发帖内容</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="content" placeholder="请输入" type="text">
+            <input type="text" name="content" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="layui-inline">
-          <button class="layui-btn layuiadmin-btn-forum-list" lay-filter="LAY-app-forumlist-search" lay-submit>
+          <button class="layui-btn layuiadmin-btn-forum-list" lay-submit lay-filter="LAY-app-forumlist-search">
             <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
           </button>
         </div>
@@ -54,17 +54,17 @@
         <button class="layui-btn layuiadmin-btn-forum-list" data-type="batchdel">删除</button>
       </div>
       <table id="LAY-app-forum-list" lay-filter="LAY-app-forum-list"></table> 
-      <script id="imgTpl" type="text/html">
+      <script type="text/html" id="imgTpl">
         <img style="display: inline-block; width: 50%; height: 100%;" src= {{ d.avatar }}>
       </script> 
-      <script id="buttonTpl" type="text/html">
+      <script type="text/html" id="buttonTpl">
         {{#  if(d.top == true){ }}
           <button class="layui-btn layui-btn-xs">已置顶</button>
         {{#  } else { }}
           <button class="layui-btn layui-btn-primary layui-btn-xs">正常显示</button>
         {{#  } }}
       </script> 
-      <script id="table-forum-list" type="text/html">
+      <script type="text/html" id="table-forum-list">
         <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
       </script>

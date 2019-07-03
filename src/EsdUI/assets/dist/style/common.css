@@ -809,3 +809,31 @@ label.think-checkbox, label.think-radio {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
+.store-total-container {
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.store-total-container .store-total-icon {
+    top: 45%;
+    right: 8%;
+    font-size: 65px;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.store-total-container .store-total-item {
+    color: #fff;
+    line-height: 2em;
+    padding: 15px 25px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.store-total-container .store-total-item > div:nth-child(2) {
+    font-size: 46px;
+    line-height: 46px;
+}
+
+.help-block{color:#999;font-size:12px}

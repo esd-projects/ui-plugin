@@ -17,19 +17,19 @@
         <div class="layui-inline">
           <label class="layui-form-label">登录名</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="loginname" placeholder="请输入" type="text">
+            <input type="text" name="loginname" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">手机</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="telphone" placeholder="请输入" type="text">
+            <input type="text" name="telphone" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
           <label class="layui-form-label">邮箱</label>
           <div class="layui-input-block">
-            <input autocomplete="off" class="layui-input" name="email" placeholder="请输入" type="text">
+            <input type="text" name="email" placeholder="请输入" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-inline">
@@ -47,7 +47,7 @@
           </div>
         </div>
         <div class="layui-inline">
-          <button class="layui-btn layuiadmin-btn-admin" lay-filter="LAY-user-back-search" lay-submit>
+          <button class="layui-btn layuiadmin-btn-admin" lay-submit lay-filter="LAY-user-back-search">
             <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
           </button>
         </div>
@@ -61,14 +61,14 @@
       </div>
       
       <table id="LAY-user-back-manage" lay-filter="LAY-user-back-manage"></table>  
-      <script id="buttonTpl" type="text/html">
+      <script type="text/html" id="buttonTpl">
         {{#  if(d.check == true){ }}
           <button class="layui-btn layui-btn-xs">已审核</button>
         {{#  } else { }}
           <button class="layui-btn layui-btn-primary layui-btn-xs">未审核</button>
         {{#  } }}
       </script>
-      <script id="table-useradmin-admin" type="text/html">
+      <script type="text/html" id="table-useradmin-admin">
         <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
         {{#  if(d.role == '超级管理员'){ }}
           <a class="layui-btn layui-btn-disabled layui-btn-xs"><i class="layui-icon layui-icon-delete"></i>删除</a>

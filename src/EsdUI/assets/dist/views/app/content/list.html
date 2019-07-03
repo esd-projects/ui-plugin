@@ -17,19 +17,19 @@
           <div class="layui-inline">
             <label class="layui-form-label">文章ID</label>
             <div class="layui-input-inline">
-              <input autocomplete="off" class="layui-input" name="id" placeholder="请输入" type="text">
+              <input type="text" name="id" placeholder="请输入" autocomplete="off" class="layui-input">
             </div>
           </div>
           <div class="layui-inline">
             <label class="layui-form-label">作者</label>
             <div class="layui-input-inline">
-              <input autocomplete="off" class="layui-input" name="author" placeholder="请输入" type="text">
+              <input type="text" name="author" placeholder="请输入" autocomplete="off" class="layui-input">
             </div>
           </div>
           <div class="layui-inline">
             <label class="layui-form-label">标题</label>
             <div class="layui-input-inline">
-              <input autocomplete="off" class="layui-input" name="title" placeholder="请输入" type="text">
+              <input type="text" name="title" placeholder="请输入" autocomplete="off" class="layui-input">
             </div>
           </div>
           <div class="layui-inline">
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="layui-inline">
-            <button class="layui-btn layuiadmin-btn-list" lay-filter="LAY-app-contlist-search" lay-submit>
+            <button class="layui-btn layuiadmin-btn-list" lay-submit lay-filter="LAY-app-contlist-search">
               <i class="layui-icon layui-icon-search layuiadmin-button-btn"></i>
             </button>
           </div>
@@ -59,14 +59,14 @@
           <button class="layui-btn layuiadmin-btn-list" data-type="add">添加</button>
         </div>
         <table id="LAY-app-content-list" lay-filter="LAY-app-content-list"></table> 
-        <script id="buttonTpl" type="text/html">
+        <script type="text/html" id="buttonTpl">
           {{#  if(d.status){ }}
             <button class="layui-btn layui-btn-xs">已发布</button>
           {{#  } else { }}
             <button class="layui-btn layui-btn-primary layui-btn-xs">待修改</button>
           {{#  } }}
         </script>
-        <script id="table-content-list" type="text/html">
+        <script type="text/html" id="table-content-list">
           <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"><i class="layui-icon layui-icon-edit"></i>编辑</a>
           <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
         </script>

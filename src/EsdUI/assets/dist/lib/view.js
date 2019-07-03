@@ -55,14 +55,17 @@
     }, d.prototype.render = function (e, a) {
         var n = this;
         layui.router();
-        if (e.indexOf(r.path.replace("/", "")) != -1) {
-            e = '/' + e;
-        } else {
+        if (e.indexOf(r.path.replace("/","")) != -1){
+            e = '/'+ e;
+        }else{
             e = r.views + e + r.engine;
         }
         return e, t("#" + s).children(".layadmin-loading").remove(), i.loading(n.container), t.ajax({
             url: e,
             type: "get",
+            beforeSend: function( xhr ) {
+                xhr.setRequestHeader('X-Requested-With', {toString: function(){ return ''; }});
+            },
             dataType: "html",
             data: {v: layui.cache.version},
             success: function (e) {

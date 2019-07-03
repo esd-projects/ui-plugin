@@ -19,13 +19,13 @@
           <div class="layui-card-body">
             <table class="layui-hide" id="test-table-form"></table>
  
-            <script id="test-table-switchTpl" type="text/html">
+            <script type="text/html" id="test-table-switchTpl">
               <!-- 这里的 checked 的状态只是演示 -->
               <input type="checkbox" name="sex" lay-skin="switch" lay-text="女|男" lay-filter="test-table-sexDemo"
                value="{{ d.id }}" data-json="{{ encodeURIComponent(JSON.stringify(d)) }}" {{ d.id == 10003 ? 'checked' : '' }}>
             </script>
              
-            <script id="test-table-checkboxTpl" type="text/html">
+            <script type="text/html" id="test-table-checkboxTpl">
               <!-- 这里的 checked 的状态只是演示 -->
               <input type="checkbox" name="lock" title="锁定" lay-filter="test-table-lockDemo" 
                value="{{d.id}}" data-json="{{ encodeURIComponent(JSON.stringify(d)) }}" {{ d.id == 10006 ? 'checked' : '' }}>

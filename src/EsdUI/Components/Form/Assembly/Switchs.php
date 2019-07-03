@@ -15,7 +15,14 @@ use ESD\Plugins\EsdUI\EsdUI;
 class Switchs extends Assembly
 {
     protected $text = '开|关';
-
+    /**
+     * @var string
+     */
+    protected $html = '';
+    /**
+     * @var string
+     */
+    protected $tips = '';
     /**
      * title text
      * description
@@ -46,6 +53,8 @@ class Switchs extends Assembly
 <div class="{$this->getClass()}">
     <input type="checkbox" lay-filter="{$this->getId()}" lay-skin="switch" lay-text="{$this->text}" value="1" {$checked} {$this->getAttributes()}>
     <input type="hidden" name="{$this->getName()}" value="{$value}" id="{$this->getId()}" />
+     {$this->getTips()}
+    {$this->getHtml()}
 </div>
 HTML;
     }
@@ -77,5 +86,42 @@ $("#{$this->getId()}").val(obj.elem.checked ? 1 : 0);
 HTML
         );
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTips(): string
+    {
+        if (!empty($this->tips)) {
+            return "<p class=\"help-block\">{$this->tips}";
+        }
+        return '';
+    }
+
+    /**
+     * @param string $title
+     * @param string $tips
+     */
+    public function setTips( string $tips)
+    {
+        $this->tips = $tips;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHtml(): string
+    {
+        return $this->html;
+    }
+
+    /**
+     * @param string $customize
+     */
+    public function setHtml(string $html): void
+    {
+        $this->html = $html;
     }
 }
